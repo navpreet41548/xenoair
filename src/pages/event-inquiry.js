@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { toast } from "react-toastify";
 
-const Contact = () => {
-  const [showMessage, setShowMessage] = useState(false);
+const EventInquiry = () => {
   const [loading, setLoading] = useState(false);
 
   const [contactData, setContactData] = useState({
     firstName: "",
     lastName: "",
     email: "",
-    customMessage: "",
+    event: "",
+    message: "",
   });
 
   const handleInput = (e) => {
@@ -43,7 +43,7 @@ const Contact = () => {
 
     // Example API call
     try {
-      const res = await fetch(`/api/contact`, {
+      const res = await fetch(`/api/event`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -125,11 +125,18 @@ const Contact = () => {
             name="email"
           />
 
+          <input
+            onChange={(e) => handleInput(e)}
+            className={styles.input}
+            placeholder="Event"
+            name="event"
+          />
+
           <textarea
             onChange={(e) => handleInput(e)}
-            name="customMessage"
+            name="message"
             className={`${styles.textarea} ${styles.message}`}
-            placeholder="Custom Message"
+            placeholder="Message"
           ></textarea>
 
           {loading ? (
@@ -148,4 +155,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default EventInquiry;

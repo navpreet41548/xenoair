@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const FlightOptionSection = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="flightOptions">
       <h2 className={styles.heading}>Flight Options</h2>
       <div className={styles.cardContainer}>
         <div className={styles.card}>

@@ -101,6 +101,11 @@
   cursor: pointer;
 }
 
+.checkbox1,
+.checkbox2 {
+  color: white;
+}
+
 .checkbox i {
   color: white;
 }

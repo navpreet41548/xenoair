@@ -21,22 +21,22 @@ const Footer = () => {
           <Link href={"/"} className={styles.colPara}>
             Home
           </Link>
-          <Link href={"/"} className={styles.colPara}>
+          <Link href={"/#about"} className={styles.colPara}>
             About
           </Link>
-          <Link href={"/"} className={styles.colPara}>
+          <Link href={"/contact"} className={styles.colPara}>
             Contact
           </Link>
         </div>
         <div className={styles.col3}>
           <h3 className={styles.colHeading}>Pricing</h3>
-          <Link href={"/"} className={styles.colPara}>
+          <Link href={"/membership"} className={styles.colPara}>
             Membership
           </Link>
-          <Link href={"/"} className={styles.colPara}>
+          <Link href={"/enterprice"} className={styles.colPara}>
             EnterPrices
           </Link>
-          <Link href={"/"} className={styles.colPara}>
+          <Link href={"/weekly-deals"} className={styles.colPara}>
             Newsletter
           </Link>
         </div>
@@ -64,12 +64,12 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.col6}>
-          <div className={styles.button}>
+          <Link href={"/weekly-deals"} className={styles.button}>
             <span className={styles.iconSpan}>
               <i class="bx bx-link-external"></i>
             </span>
             Newsletter
-          </div>
+          </Link>
         </div>
       </div>
       <div className={styles.footerBottom}>

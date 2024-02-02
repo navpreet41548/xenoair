@@ -57,43 +57,43 @@ const Navbar = () => {
       </div>
       <ul className={styles.navCenter} ref={menuRef}>
         <li>
-          <Link className={styles.navLink} href={"/#home"}>
+          <Link className={styles.navLink} href={"/"}>
             HOME
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"#about"}>
-            ABOUT
-          </Link>
-        </li>
-        <li>
-          <Link className={styles.navLink} href={"/#values"}>
+          <Link className={styles.navLink} href={"/services"}>
             SERVICES
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"#industries"}>
+          <Link className={styles.navLink} href={"/membership"}>
             MEMBERSHIP
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"#blog"}>
+          <Link className={styles.navLink} href={"/enterprice"}>
             ENTERPRISE
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"#blog"}>
-            CONTACT
+          <Link className={styles.navLink} href={"/event"}>
+            EVENT
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"#blog"}>
-            FAQs
+          <Link className={styles.navLink} href={"/weekly-deals"}>
+            WEEKLY DEALS
+          </Link>
+        </li>
+        <li>
+          <Link className={styles.navLink} href={"/contact"}>
+            CONTACT
           </Link>
         </li>
       </ul>
       <div className={styles.navRight}>
-        <Link className={styles.navButton} href={"#contact"} ref={buttonRef}>
+        <Link className={styles.navButton} href={"/book"} ref={buttonRef}>
           <i class="bx bxs-plane-take-off"></i> BOOK NOW
         </Link>
       </div>

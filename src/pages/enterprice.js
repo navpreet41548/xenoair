@@ -136,9 +136,14 @@ const Enterprice = () => {
               </div>
             </div>
           </div>
-          <Link href={"/"} className={styles.button}>
+          <a
+            href={
+              "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+            }
+            className={styles.button}
+          >
             Get Started
-          </Link>
+          </a>
         </div>
         <div className={styles.card}>
           <div className={styles.cardUpper}>
@@ -197,9 +202,14 @@ const Enterprice = () => {
               </div>
             </div>
           </div>
-          <Link href={"/"} className={styles.button}>
+          <a
+            href={
+              "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+            }
+            className={styles.button}
+          >
             Get Started
-          </Link>
+          </a>
         </div>
         <div className={styles.card}>
           <div className={styles.cardUpper}>
@@ -263,9 +273,14 @@ const Enterprice = () => {
                 </ul>
               </div>
             </div>
-            <Link href={"/"} className={styles.button}>
+            <a
+              href={
+                "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+              }
+              className={styles.button}
+            >
               Get Started
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -324,9 +339,14 @@ const Enterprice = () => {
           <div className={styles.col2}>
             <div className={styles.colHeader}>
               <h3 className={styles.planHeading}>SMALL</h3>
-              <Link href={"/"} className={styles.planButton}>
+              <a
+                href={
+                  "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+                }
+                className={styles.planButton}
+              >
                 Get Started
-              </Link>
+              </a>
             </div>
             <div className={styles.colBody}>
               <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
@@ -387,9 +407,14 @@ const Enterprice = () => {
           <div className={styles.col3}>
             <div className={styles.colHeader}>
               <h3 className={styles.planHeading}>MEDIUM</h3>
-              <Link href={"/"} className={styles.planButton}>
+              <a
+                href={
+                  "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+                }
+                className={styles.planButton}
+              >
                 Get Started
-              </Link>
+              </a>
             </div>
             <div className={styles.colBody}>
               <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
@@ -450,9 +475,14 @@ const Enterprice = () => {
           <div className={styles.col4}>
             <div className={styles.colHeader}>
               <h3 className={styles.planHeading}>DIAMOND</h3>
-              <Link href={"/"} className={styles.planButton}>
+              <a
+                href={
+                  "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+                }
+                className={styles.planButton}
+              >
                 Get Started
-              </Link>
+              </a>
             </div>
             <div className={styles.colBody}>
               <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>

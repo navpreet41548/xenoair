@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "@/styles/AboutSection.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <div className={styles.aboutContainer}>
+    <div className={styles.aboutContainer} id="about">
       <div className={styles.left}>
         <div className={styles.content}>
           <h3 className={styles.tagLine}>ABOUT US</h3>
@@ -21,9 +22,9 @@ const AboutSection = () => {
             aim to be part of the luxury travel industry; we aim to
             revolutionize it.
           </p>
-          <button className={styles.button}>
+          <Link href="/services" className={styles.button}>
             <i class="bx bx-chevron-right"></i> OUR SERVICES
-          </button>
+          </Link>
         </div>
       </div>
       <div className={styles.right}>

@@ -90,6 +90,9 @@
   border-top: 1px solid #ffffff31;
   cursor: pointer;
 }
+.cardListActive {
+  color: var(--secondary-light);
+}
 
 .cardList:last-child {
   border-bottom: 1px solid #ffffff31;
@@ -101,6 +104,11 @@
   max-width: 0px;
   opacity: 0;
   transition: all 0.3s ease;
+}
+
+.cardListActive .arrowIcon {
+  max-width: 100px;
+  opacity: 1;
 }
 
 .cardList:hover .arrowIcon {

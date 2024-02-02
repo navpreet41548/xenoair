@@ -42,7 +42,7 @@
 
 .button {
   padding: 20px 20px;
-  width: 170px;
+  width: 200px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -54,6 +54,7 @@
   border-radius: 30px;
   font-weight: 500;
   margin-top: 70px;
+  font-size: 17px;
 }
 
 .button i {
@@ -211,6 +212,9 @@
   }
   .mainPara {
     margin: 10px 0;
+  }
+  .button {
+    font-size: 15px;
   }
 }
 

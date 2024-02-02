@@ -1,0 +1,189 @@
+.container {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainHeading {
+  font-size: 40px;
+  color: white;
+  font-weight: 500;
+}
+
+.mainPara {
+  font-size: 19px;
+  color: white;
+  margin-top: 10px;
+  max-width: 800px;
+  text-align: center;
+  font-weight: 400 !important;
+}
+
+.mainButton {
+  background-color: var(--secondary-light);
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 500 !important;
+  margin-top: 40px;
+  border-radius: 30px;
+}
+
+.serviceContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 130px;
+}
+
+.serviceContainerMiddle .contentPart {
+  margin-right: 0;
+  margin-left: 100px;
+}
+
+.contentPart {
+  width: 600px;
+  margin-right: 100px;
+  padding-top: 50px;
+}
+
+.imageContainer {
+  width: 600px;
+}
+
+.serviceImage {
+  width: 100%;
+  height: auto;
+}
+
+.serviceHeading {
+  color: white;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.servicePara {
+  color: white;
+  font-size: 19px;
+  font-weight: 400 !important;
+  margin: 10px 0;
+}
+
+.serviceButton {
+  border: 1px solid var(--secondary-light);
+  color: var(--secondary-light);
+  padding: 14px 20px;
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 19px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.serviceButton:hover {
+  background-color: var(--secondary-light);
+  color: white;
+}
+
+@media screen and (max-width: 1550px) {
+  .serviceHeading {
+    font-size: 45px;
+  }
+  .servicePara {
+    font-size: 17px;
+  }
+  .contentPart {
+    width: 500px;
+  }
+  .imageContainer {
+    width: 500px;
+  }
+  .mainHeading {
+    font-size: 35px;
+  }
+  .mainPara {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .serviceContainer {
+    justify-content: space-evenly;
+  }
+  .contentPart {
+    width: 40%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .serviceContainerMiddle .contentPart {
+    margin-left: 0px;
+  }
+  .imageContainer {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .serviceHeading {
+    font-size: 35px;
+  }
+  .servicePara {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    padding-top: 150px;
+  }
+  .mainHeading {
+    font-size: 30px;
+  }
+  .mainPara {
+    font-size: 15px;
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .serviceContainer {
+    flex-direction: column-reverse;
+    margin-top: 100px;
+  }
+  .serviceContainerMiddle {
+    flex-direction: column;
+  }
+  .contentPart {
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .serviceImage {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .serviceHeading {
+    font-size: 25px;
+  }
+  .servicePara {
+    font-size: 14px;
+  }
+  .mainHeading {
+    font-size: 20px;
+    text-align: center;
+  }
+  .mainPara {
+    width: 95%;
+  }
+}

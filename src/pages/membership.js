@@ -106,7 +106,7 @@ const Membership = () => {
               </div>
             </div>
           </div>
-          <Link href={"/"} className={styles.button}>
+          <Link href={"/membership-inquiry"} className={styles.button}>
             Get Started
           </Link>
         </div>
@@ -180,7 +180,7 @@ const Membership = () => {
               </div>
             </div>
           </div>
-          <Link href={"/"} className={styles.button}>
+          <Link href={"/membership-inquiry"} className={styles.button}>
             Get Started
           </Link>
         </div>
@@ -263,7 +263,7 @@ const Membership = () => {
                 </ul>
               </div>
             </div>
-            <Link href={"/"} className={styles.button}>
+            <Link href={"/membership-inquiry"} className={styles.button}>
               Get Started
             </Link>
           </div>
@@ -309,7 +309,7 @@ const Membership = () => {
           <div className={styles.col2}>
             <div className={styles.colHeader}>
               <h3 className={styles.planHeading}>GOLD</h3>
-              <Link href={"/"} className={styles.planButton}>
+              <Link href={"/membership-inquiry"} className={styles.planButton}>
                 Get Started
               </Link>
             </div>
@@ -357,7 +357,7 @@ const Membership = () => {
           <div className={styles.col3}>
             <div className={styles.colHeader}>
               <h3 className={styles.planHeading}>PLATINUM</h3>
-              <Link href={"/"} className={styles.planButton}>
+              <Link href={"/membership-inquiry"} className={styles.planButton}>
                 Get Started
               </Link>
             </div>
@@ -405,7 +405,7 @@ const Membership = () => {
           <div className={styles.col4}>
             <div className={styles.colHeader}>
               <h3 className={styles.planHeading}>DIAMOND</h3>
-              <Link href={"/"} className={styles.planButton}>
+              <Link href={"/membership-inquiry"} className={styles.planButton}>
                 Get Started
               </Link>
             </div>

@@ -27,7 +27,7 @@ export default async function handler(req, res) {
     var mailOptions = {
       from: "navwebdev2@gmail.com",
       // to: "navwebdev2@gmail.com ",
-      to: "navwebdev2@gmail.com ",
+      to: "info@xenoair.com",
       subject: `New Booking by ${firstName}`,
       text: ` 
         Name:${firstName} ${lastName}

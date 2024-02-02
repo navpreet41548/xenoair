@@ -102,9 +102,9 @@ const HomeSection = () => {
         <Link href={"/"} className={styles.socialIcon}>
           <i class="bx bxl-facebook"></i>
         </Link>
-        <Link href={"/"} className={styles.socialIcon}>
+        <a href={"mailto:info@xenoair.com"} className={styles.socialIcon}>
           <i class="bx bx-envelope"></i>
-        </Link>
+        </a>
       </div>
 
       <Image

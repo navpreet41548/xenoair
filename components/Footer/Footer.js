@@ -52,15 +52,18 @@ const Footer = () => {
         <div className={styles.col5}>
           <h3 className={styles.colHeading}>Follow Us</h3>
           <div className={styles.socialContainer}>
-            <Link href={"/"} className={styles.socialIcon}>
+            <a
+              href={"https://www.instagram.com/officialxenoair"}
+              className={styles.socialIcon}
+            >
               <i class="bx bxl-instagram"></i>
-            </Link>
+            </a>
             <Link href={"/"} className={styles.socialIcon}>
               <i class="bx bxl-facebook"></i>
             </Link>
-            <Link href={"/"} className={styles.socialIcon}>
+            <a href={"mailto:info@xenoair.com"} className={styles.socialIcon}>
               <i class="bx bx-envelope"></i>
-            </Link>
+            </a>
           </div>
         </div>
         <div className={styles.col6}>

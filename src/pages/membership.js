@@ -100,7 +100,7 @@ const Membership = () => {
                   <li className={styles.addOnListItem}>
                     Professional Services
                   </li>
-                  <li className={styles.addOnListItem}>Exotic Card Services</li>
+                  <li className={styles.addOnListItem}>Exotic Car Services</li>
                   <li className={styles.addOnListItem}>Catering Services</li>
                 </ul>
               </div>
@@ -174,7 +174,7 @@ const Membership = () => {
                   <li className={styles.addOnListItem}>
                     Professional Services
                   </li>
-                  <li className={styles.addOnListItem}>Exotic Card Services</li>
+                  <li className={styles.addOnListItem}>Exotic Car Services</li>
                   <li className={styles.addOnListItem}>Catering Services</li>
                 </ul>
               </div>
@@ -258,7 +258,7 @@ const Membership = () => {
                 </div>
                 <ul className={styles.addOnList}>
                   <li className={styles.addOnListItem}>Security Services</li>
-                  <li className={styles.addOnListItem}>Exotic Card Services</li>
+                  <li className={styles.addOnListItem}>Exotic Car Services</li>
                   <li className={styles.addOnListItem}>Catering Services</li>
                 </ul>
               </div>

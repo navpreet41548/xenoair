@@ -85,7 +85,7 @@ const Footer = () => {
         </p>
         <div className={styles.att}>
           <h4 className={styles.copyright}>
-            All rights reserved @ xenoair.com 2024
+            &copy; 2024 XENOAIR. All Rights Reserved.
           </h4>
           <h4 className={styles.credit}>
             Site By <span className={styles.diff}>Name</span>

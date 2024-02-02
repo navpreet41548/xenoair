@@ -93,9 +93,12 @@ const HomeSection = () => {
       </div>
 
       <div className={styles.socialContainer}>
-        <Link href={"/"} className={styles.socialIcon}>
+        <a
+          href={"https://www.instagram.com/officialxenoair"}
+          className={styles.socialIcon}
+        >
           <i class="bx bxl-instagram"></i>
-        </Link>
+        </a>
         <Link href={"/"} className={styles.socialIcon}>
           <i class="bx bxl-facebook"></i>
         </Link>

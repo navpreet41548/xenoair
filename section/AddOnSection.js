@@ -48,6 +48,13 @@ const AddOnSection = () => {
       const element = cardList[i];
       element.classList.remove(styles.cardListActive);
     }
+
+    const addOnImage = document.getElementsByClassName(styles.addOnImage);
+    for (let i = 0; i < addOnImage.length; i++) {
+      const element = addOnImage[i];
+      element.classList.remove(styles.addOnImageActive);
+    }
+    addOnImage[index].classList.add(styles.addOnImageActive);
     cardList[index].classList.add(styles.cardListActive);
   };
 
@@ -63,8 +70,49 @@ const AddOnSection = () => {
       <div className={styles.cardContainer}>
         <div className={`${styles.card} ${styles.cardAddOn}`}>
           <Image
+            className={`${styles.addOnImage} ${styles.addOnImageActive}`}
+            src={`/images/addOns/addOn1.png`}
+            // src={`/images/addOns/${selectedService.image}`}
+            width={1000}
+            height={1000}
+            alt="Service Image"
+          />
+          <Image
             className={styles.addOnImage}
-            src={`/images/addOns/${selectedService.image}`}
+            src={`/images/addOns/addOn2.png`}
+            // src={`/images/addOns/${selectedService.image}`}
+            width={1000}
+            height={1000}
+            alt="Service Image"
+          />
+          <Image
+            className={styles.addOnImage}
+            src={`/images/addOns/addOn3.png`}
+            // src={`/images/addOns/${selectedService.image}`}
+            width={1000}
+            height={1000}
+            alt="Service Image"
+          />
+          <Image
+            className={styles.addOnImage}
+            src={`/images/addOns/addOn4.png`}
+            // src={`/images/addOns/${selectedService.image}`}
+            width={1000}
+            height={1000}
+            alt="Service Image"
+          />
+          <Image
+            className={styles.addOnImage}
+            src={`/images/addOns/addOn5.png`}
+            // src={`/images/addOns/${selectedService.image}`}
+            width={1000}
+            height={1000}
+            alt="Service Image"
+          />
+          <Image
+            className={styles.addOnImage}
+            src={`/images/addOns/addOn6.png`}
+            // src={`/images/addOns/${selectedService.image}`}
             width={1000}
             height={1000}
             alt="Service Image"

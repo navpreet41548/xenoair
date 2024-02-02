@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.content {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.heading {
+  font-size: 30px;
+  color: white;
+  font-weight: 400 !important;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.para {
+  text-align: center;
+  color: white;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 1550px) {
+  .container {
+    padding-top: 100px;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .para {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .heading {
+    font-size: 17px;
+  }
+  .para {
+    font-size: 11px;
+  }
+}

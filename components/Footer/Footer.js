@@ -41,12 +41,9 @@ const Footer = () => {
           </Link>
         </div>
         <div className={styles.col4}>
-          <h3 className={styles.colHeading}>Privacy</h3>
-          <Link href={"/"} className={styles.colPara}>
-            Term & Conditions
-          </Link>
-          <Link href={"/"} className={styles.colPara}>
-            Refund & Cancellation
+          <h3 className={styles.colHeading}>Legal</h3>
+          <Link href={"/customer-disclosure"} className={styles.colPara}>
+            Customer Disclosure
           </Link>
         </div>
         <div className={styles.col5}>

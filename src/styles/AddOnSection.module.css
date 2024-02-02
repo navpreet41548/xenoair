@@ -45,7 +45,14 @@
   position: absolute;
   z-index: 0;
   top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
+
+.addOnImageActive {
+  opacity: 1;
+}
+
 .backgroundImage {
   position: absolute;
   width: 100%;

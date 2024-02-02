@@ -1,0 +1,212 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 150px;
+}
+
+.heading {
+  font-size: 40px;
+  color: white;
+  font-weight: 500;
+}
+
+.para {
+  font-size: 16px;
+  color: white;
+  max-width: 700px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.card {
+  width: 500px;
+  margin: 0px 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 30px 0;
+  justify-content: flex-end;
+}
+
+.addOnImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+}
+.backgroundImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+}
+
+.cardUl {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.cardContent {
+  padding: 0 30px;
+}
+
+.cardHeading {
+  z-index: 1;
+  position: relative;
+  font-size: 26px;
+  color: white;
+  font-weight: 500;
+}
+
+.cardPara {
+  z-index: 1;
+  position: relative;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cardList {
+  list-style: none;
+  color: white;
+  padding: 15px 20px;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  border-top: 1px solid #ffffff31;
+  cursor: pointer;
+}
+
+.cardList:last-child {
+  border-bottom: 1px solid #ffffff31;
+}
+
+.arrowIcon {
+  margin-right: 15px;
+  display: inline-block;
+  max-width: 0px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.cardList:hover .arrowIcon {
+  max-width: 100px;
+  opacity: 1;
+}
+
+.cardAddOn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  border-radius: 13px;
+}
+
+@media screen and (max-width: 1550px) {
+  .heading {
+    font-size: 35px;
+  }
+  .cardList {
+    font-size: 19px;
+  }
+  .container {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cardContainer {
+    justify-content: space-evenly;
+  }
+  .card {
+    width: 45%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 950px) {
+  .heading {
+    font-size: 30px;
+  }
+  .para {
+    font-size: 15px;
+  }
+  .cardHeading {
+    font-size: 18px;
+  }
+  .cardPara {
+    font-size: 13px;
+  }
+  .cardList {
+    padding: 12px 15px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .para {
+    width: 90%;
+  }
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 500px;
+    height: 400px;
+    margin: 20px 0;
+    justify-content: center;
+  }
+  .cardAddOn {
+    justify-content: flex-end;
+  }
+  .cardHeading {
+    font-size: 23px;
+  }
+  .cardPara {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    width: 90%;
+  }
+  .heading {
+    font-size: 25px;
+  }
+  .para {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cardHeading {
+    font-size: 18px;
+  }
+  .cardPara {
+    font-size: 15px;
+  }
+  .card {
+    height: 350px;
+    margin: 10px 0;
+    border-radius: 13px;
+  }
+  .cardList {
+    font-size: 15px;
+  }
+}

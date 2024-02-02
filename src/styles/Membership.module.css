@@ -1,0 +1,585 @@
+.container {
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.heading {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.para {
+  max-width: 900px;
+  margin: 20px 0;
+  width: 90%;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+}
+
+.smallPara {
+  max-width: 1000px;
+  font-size: 15px;
+  color: #dbdbdb;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.cardContainer {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1350px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px 20px;
+  width: 30%;
+  border-radius: 20px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.planName {
+  font-size: 20px;
+  color: #2b3843;
+  font-weight: 600;
+}
+
+.pricing {
+  font-size: 20px;
+  color: #2b3843;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.priceDiff {
+  font-size: 13px;
+  font-weight: 400;
+  color: #778c9d;
+}
+
+.cardPoint {
+  font-size: 15px;
+  color: #454545;
+  margin: 10px 0;
+}
+
+.cardHeading {
+  font-size: 15px;
+  color: #454545;
+  font-weight: 600;
+}
+
+.includedSection {
+  margin: 20px 0;
+}
+
+.checklist {
+  margin: 10px 0;
+}
+
+.checklistItem {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #d1d1d1;
+}
+
+.checklistItem:last-child {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.checklistItem i {
+  color: var(--secondary-light);
+  margin-right: 10px;
+}
+
+.checklistText {
+  font-weight: 600;
+  color: #454545;
+  font-size: 15px;
+}
+
+.checkListTextDiff {
+  font-weight: 600;
+  color: #858585;
+  font-size: 11px;
+  margin-left: 20px;
+}
+
+.dropdownContainer {
+  margin: 20px 0;
+}
+
+.addOnList {
+  margin: 20px 0;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrowIcon {
+  transition: all 0.3s ease;
+}
+.arrowIcon i {
+  font-size: 25px;
+}
+
+.addOnListItem {
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+  border-top: 1px solid #d1d1d1;
+  font-weight: 600;
+  color: #454545;
+  font-size: 15px;
+}
+
+.addOnListItem:last-child {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.addOnListItem::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: #454545;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.button {
+  border: 1px solid #4d657a;
+  padding: 15px 40px;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #454545;
+  transition: all 0.3s ease;
+  width: 200px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+.addOnListActive {
+  opacity: 1;
+  max-height: 500px;
+}
+
+.arrowIconActive {
+  transform: rotate(-180deg);
+}
+
+.compareWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.compareContainer {
+  display: flex;
+  width: 90%;
+  max-width: 1300px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.col1 {
+  width: 30%;
+  border-right: 1px solid #ffffff44;
+}
+.col2,
+.col3,
+.col4 {
+  width: 23%;
+  border-right: 1px solid #ffffff44;
+}
+
+.col4 {
+  border-right: 0;
+}
+
+.colHeader {
+  padding: 10px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.compareHeading {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.comparePara {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.planHeading {
+  font-size: 18px;
+  font-weight: 500;
+
+  color: white;
+}
+
+.planButton {
+  background-color: white;
+  width: 70%;
+  color: #2b3843;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.colBody {
+  border-top: 1px solid #ffffff44;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  font-weight: 400;
+}
+
+.colBody:last-child {
+  border-bottom: 1px solid #ffffff44;
+}
+
+.sideHeading {
+  font-size: 17px;
+  font-weight: 400 !important;
+}
+
+.boxText {
+  width: 100%;
+  text-align: center;
+  font-weight: 400 !important;
+  font-size: 17px;
+}
+
+.boxTextWhite {
+  color: white;
+}
+
+.boxTextLight {
+  color: #d0d0d0;
+}
+
+.boxTextGold {
+  color: var(--secondary-light);
+}
+
+.swipeHeading {
+  font-size: 13px;
+  margin-top: 50px;
+  color: white;
+  font-weight: 400 !important;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+@media screen and (max-width: 1550px) {
+  .heading {
+    font-size: 35px;
+  }
+  .para {
+    font-size: 15px;
+  }
+  .smallPara {
+    font-size: 13px;
+  }
+  .checklistItem {
+    padding: 7px 0;
+  }
+  .dropdownContainer {
+    margin: 15px 0;
+  }
+  .addOnList {
+    padding: 7px 0;
+  }
+  .button {
+    font-size: 18px;
+  }
+  .compareHeading {
+    font-size: 25px;
+  }
+  .comparePara {
+    font-size: 16px;
+  }
+  .planHeading {
+    font-size: 17px;
+  }
+  .sideHeading {
+    font-size: 16px;
+  }
+  .boxText {
+    font-size: 15px;
+  }
+  .colBody {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .checklistText {
+    font-size: 13px;
+  }
+  .checkListTextDiff {
+    font-size: 9px;
+  }
+  .addOnListItem {
+    font-size: 13px;
+  }
+  .addOnListItem::before {
+    width: 7px;
+    height: 1px;
+  }
+  .planName {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .pricing {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .cardPoint {
+    font-size: 13px;
+  }
+  .cardHeading {
+    font-size: 14px;
+  }
+  .addOnList {
+    margin: 10px 0;
+    padding: 0;
+  }
+  .button {
+    padding: 12px 40px;
+    font-size: 15px;
+    width: 170px;
+  }
+  .checklistItem i {
+    font-size: 13px;
+    margin-right: 7px;
+  }
+  .priceDiff {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .cardContainer {
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .arrowIcon i {
+    font-size: 15px;
+  }
+  .card {
+    width: 400px;
+    margin-bottom: 30px;
+  }
+  .compareHeading {
+    font-size: 18px;
+  }
+  .comparePara {
+    font-size: 13px;
+  }
+  .planHeading {
+    font-size: 15px;
+  }
+  .planButton {
+    font-size: 13px;
+  }
+  .sideHeading {
+    font-size: 15px;
+  }
+  .boxText {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .heading {
+    font-size: 25px;
+  }
+  .para {
+    font-size: 13px;
+  }
+  .smallPara {
+    font-size: 11px;
+    width: 90%;
+  }
+
+  .container {
+    padding-top: 150px;
+  }
+
+  .compareWrapper {
+    display: block;
+    overflow: scroll;
+    width: 100%;
+    padding: 20px;
+  }
+  .compareContainer {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .compareContainer {
+    width: 700px;
+  }
+  .card {
+    width: 90%;
+  }
+  .para {
+    width: 95%;
+    font-size: 11px;
+  }
+
+  .col1 {
+    width: 30%;
+  }
+  .sideHeading {
+    font-size: 13px;
+  }
+  .planButton {
+    width: 90px;
+    font-size: 10px;
+  }
+  .col2,
+  .col2,
+  .col3 {
+    width: 20%;
+  }
+  .boxText {
+    font-size: 10px;
+  }
+  .compareContainer {
+    margin-bottom: 20px;
+  }
+  .swipeHeading {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+
+/* Faq Section */
+
+.faqWrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 800px;
+}
+
+.question {
+  display: flex;
+  position: relative;
+  color: white;
+  border-top: 1px solid #797979;
+  border-bottom: 1px solid #797979;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.questionText {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.icon {
+  margin: 0 10px;
+}
+
+.arrowIconFaq {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.answerPara {
+  padding: 30px 0;
+  color: white;
+}
+
+.answerActive {
+  max-height: 300px;
+}
+
+.arrowIconActive {
+  transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 1450px) {
+  .container {
+    padding-bottom: 100px;
+  }
+  .questionText {
+    font-size: 18px;
+  }
+  .heading {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .faqWrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 25px;
+  }
+  .faqWrapper {
+    width: 95%;
+  }
+  .questionText {
+    font-size: 15px;
+  }
+  .answerPara {
+    font-size: 12px;
+    padding: 20px 0;
+  }
+  .questionText {
+    margin-right: 30px;
+  }
+}

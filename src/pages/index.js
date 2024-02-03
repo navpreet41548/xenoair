@@ -10,7 +10,10 @@ export default function Home() {
     <>
       <Head>
         <title>XENOAIR</title>
-        <meta name="description" content="HOME|XENOAIR" />
+        <meta
+          name="description"
+          content="Anytime, anywhere, by land, by air, or by sea we look forward to serving your friends, family, or companies travel needs."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo.png" />
       </Head>

@@ -57,37 +57,61 @@ const Navbar = () => {
       </Link>
       <ul className={styles.navCenter} ref={menuRef}>
         <li>
-          <Link className={styles.navLink} href={"/"}>
+          <Link onClick={removeClass} className={styles.navLink} href={"/"}>
             HOME
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"/services"}>
+          <Link
+            onClick={removeClass}
+            className={styles.navLink}
+            href={"/services"}
+          >
             SERVICES
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"/membership"}>
+          <Link
+            onClick={removeClass}
+            className={styles.navLink}
+            href={"/membership"}
+          >
             MEMBERSHIP
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"/enterprice"}>
+          <Link
+            onClick={removeClass}
+            className={styles.navLink}
+            href={"/enterprice"}
+          >
             ENTERPRISE
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"/event"}>
+          <Link
+            onClick={removeClass}
+            className={styles.navLink}
+            href={"/event"}
+          >
             EVENT
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"/weekly-deals"}>
+          <Link
+            onClick={removeClass}
+            className={styles.navLink}
+            href={"/weekly-deals"}
+          >
             WEEKLY DEALS
           </Link>
         </li>
         <li>
-          <Link className={styles.navLink} href={"/contact"}>
+          <Link
+            onClick={removeClass}
+            className={styles.navLink}
+            href={"/contact"}
+          >
             CONTACT
           </Link>
         </li>

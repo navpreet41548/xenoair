@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { toast } from "react-toastify";
+import Head from "next/head";
 
 const WeeklyDeals = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -105,46 +106,57 @@ const WeeklyDeals = () => {
   };
 
   return (
-    <div className={`${styles.container} ${styles.smallFormContainer}`}>
-      <div className={styles.form}>
-        <h2 className={styles.formHeading}>Fill Out the Form</h2>
-        <p className={styles.formPara}>
-          Sign up for receiving update about our new deals
-        </p>
-
-        <div className={styles.inputWrapper}>
-          <input
-            onChange={(e) => handleInput(e)}
-            name="firstName"
-            className={styles.input}
-            placeholder="First Name"
-          />
-          <input
-            onChange={(e) => handleInput(e)}
-            name="lastName"
-            className={styles.input}
-            placeholder="Last Name"
-          />
-        </div>
-
-        <input
-          onChange={(e) => handleInput(e)}
-          name="email"
-          className={styles.input}
-          placeholder="Email"
+    <>
+      <Head>
+        <title>WEEKLY DEALS</title>
+        <meta
+          name="description"
+          content="Sign up for receiving update about our new deals"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/logo.png" />
+      </Head>
+      <div className={`${styles.container} ${styles.smallFormContainer}`}>
+        <div className={styles.form}>
+          <h2 className={styles.formHeading}>Fill Out the Form</h2>
+          <p className={styles.formPara}>
+            Sign up for receiving update about our new deals
+          </p>
 
-        {loading ? (
-          <button className={styles.button}>
-            <i class="bx bx-loader-alt bx-spin"></i>
-          </button>
-        ) : (
-          <button onClick={handleSubmit} className={styles.button}>
-            Subscribe
-          </button>
-        )}
+          <div className={styles.inputWrapper}>
+            <input
+              onChange={(e) => handleInput(e)}
+              name="firstName"
+              className={styles.input}
+              placeholder="First Name"
+            />
+            <input
+              onChange={(e) => handleInput(e)}
+              name="lastName"
+              className={styles.input}
+              placeholder="Last Name"
+            />
+          </div>
+
+          <input
+            onChange={(e) => handleInput(e)}
+            name="email"
+            className={styles.input}
+            placeholder="Email"
+          />
+
+          {loading ? (
+            <button className={styles.button}>
+              <i class="bx bx-loader-alt bx-spin"></i>
+            </button>
+          ) : (
+            <button onClick={handleSubmit} className={styles.button}>
+              Subscribe
+            </button>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

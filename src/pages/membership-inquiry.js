@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { toast } from "react-toastify";
+import Head from "next/head";
 
 const MembershipInquiry = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -149,157 +150,168 @@ const MembershipInquiry = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.form}>
-        <h2 className={styles.formHeading}>Fill Out the Form</h2>
-        <p className={styles.formPara}>
-          We will get back to you as soon as we can
-        </p>
+    <>
+      <Head>
+        <title>MEMBERSHIP INQUIRY</title>
+        <meta
+          name="description"
+          content="Fill out the form to know more about"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/logo.png" />
+      </Head>
+      <div className={styles.container}>
+        <div className={styles.form}>
+          <h2 className={styles.formHeading}>Fill Out the Form</h2>
+          <p className={styles.formPara}>
+            We will get back to you as soon as we can
+          </p>
 
-        <div className={styles.inputWrapper}>
+          <div className={styles.inputWrapper}>
+            <input
+              onChange={(e) => handleInput(e)}
+              name="firstName"
+              className={styles.input}
+              placeholder="First Name"
+            />
+            <input
+              onChange={(e) => handleInput(e)}
+              name="lastName"
+              className={styles.input}
+              placeholder="Last Name"
+            />
+          </div>
+
           <input
             onChange={(e) => handleInput(e)}
-            name="firstName"
+            name="email"
             className={styles.input}
-            placeholder="First Name"
+            placeholder="Email"
           />
           <input
             onChange={(e) => handleInput(e)}
-            name="lastName"
+            name="phone"
             className={styles.input}
-            placeholder="Last Name"
+            placeholder="Phone"
           />
-        </div>
+          <h3 className={styles.label}>Preferred Method for Contact</h3>
+          <select
+            onChange={(e) => handleInput(e)}
+            name="contactMethod"
+            className={styles.input}
+          >
+            <option value={"Phone Call"}>Phone Call</option>
+            <option value={"Email"}>Email</option>
+            <option value={"Text"}>Text</option>
+          </select>
+          <h3 className={styles.label}>Date of Birth</h3>
+          <input
+            onChange={(e) => handleInput(e)}
+            name="dateOfBirth"
+            className={styles.input}
+            placeholder="Date Of birth"
+            type="Date"
+          />
+          <input
+            onChange={(e) => handleInput(e)}
+            name="address"
+            className={styles.input}
+            placeholder="Address"
+          />
+          <input
+            onChange={(e) => handleInput(e)}
+            name="weight"
+            className={styles.input}
+            placeholder="Weight"
+          />
+          <h3 className={styles.label}>Sex</h3>
+          <div className={styles.checkboxWrapperContainer}>
+            <div
+              className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
+            >
+              <div
+                className={`${styles.checkbox} ${styles.checkbox1}`}
+                onClick={() => handleCheckbox1(0, "Male")}
+              >
+                <i class="bx bx-check"></i>
+              </div>
+              <h4 className={styles.checkboxText}>Male</h4>
+            </div>
+            <div
+              className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
+            >
+              <div
+                className={`${styles.checkbox} ${styles.checkbox1}`}
+                onClick={() => handleCheckbox1(1, "Female")}
+              >
+                <i class="bx bx-check"></i>
+              </div>
+              <h4 className={styles.checkboxText}>Female</h4>
+            </div>
+          </div>
+          <h3 className={styles.label}>
+            Which Membership Tier Are You Interested In?
+          </h3>
+          <div className={styles.checkboxWrapperContainer}>
+            <div
+              className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
+            >
+              <div
+                className={`${styles.checkbox} ${styles.checkbox2}`}
+                onClick={() => handleCheckbox2(0, "GOLD")}
+              >
+                <i class="bx bx-check"></i>
+              </div>
+              <h4 className={styles.checkboxText}>GOLD</h4>
+            </div>
+            <div
+              className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
+            >
+              <div
+                className={`${styles.checkbox} ${styles.checkbox2}`}
+                onClick={() => handleCheckbox2(1, "PLATINUM")}
+              >
+                <i class="bx bx-check"></i>
+              </div>
+              <h4 className={styles.checkboxText}>PLATINUM</h4>
+            </div>
+            <div
+              className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
+            >
+              <div
+                className={`${styles.checkbox} ${styles.checkbox2}`}
+                onClick={() => handleCheckbox2(2, "DIAMOND")}
+              >
+                <i class="bx bx-check"></i>
+              </div>
+              <h4 className={styles.checkboxText}>DIAMOND</h4>
+            </div>
+          </div>
 
-        <input
-          onChange={(e) => handleInput(e)}
-          name="email"
-          className={styles.input}
-          placeholder="Email"
-        />
-        <input
-          onChange={(e) => handleInput(e)}
-          name="phone"
-          className={styles.input}
-          placeholder="Phone"
-        />
-        <h3 className={styles.label}>Preferred Method for Contact</h3>
-        <select
-          onChange={(e) => handleInput(e)}
-          name="contactMethod"
-          className={styles.input}
-        >
-          <option value={"Phone Call"}>Phone Call</option>
-          <option value={"Email"}>Email</option>
-          <option value={"Text"}>Text</option>
-        </select>
-        <h3 className={styles.label}>Date of Birth</h3>
-        <input
-          onChange={(e) => handleInput(e)}
-          name="dateOfBirth"
-          className={styles.input}
-          placeholder="Date Of birth"
-          type="Date"
-        />
-        <input
-          onChange={(e) => handleInput(e)}
-          name="address"
-          className={styles.input}
-          placeholder="Address"
-        />
-        <input
-          onChange={(e) => handleInput(e)}
-          name="weight"
-          className={styles.input}
-          placeholder="Weight"
-        />
-        <h3 className={styles.label}>Sex</h3>
-        <div className={styles.checkboxWrapperContainer}>
-          <div
-            className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
-          >
-            <div
-              className={`${styles.checkbox} ${styles.checkbox1}`}
-              onClick={() => handleCheckbox1(0, "Male")}
-            >
-              <i class="bx bx-check"></i>
-            </div>
-            <h4 className={styles.checkboxText}>Male</h4>
-          </div>
-          <div
-            className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
-          >
-            <div
-              className={`${styles.checkbox} ${styles.checkbox1}`}
-              onClick={() => handleCheckbox1(1, "Female")}
-            >
-              <i class="bx bx-check"></i>
-            </div>
-            <h4 className={styles.checkboxText}>Female</h4>
-          </div>
+          <textarea
+            onChange={(e) => handleInput(e)}
+            name="departingAreasOfInterest"
+            className={styles.textarea}
+            placeholder="Departing Areas of Interest"
+          ></textarea>
+          <textarea
+            onChange={(e) => handleInput(e)}
+            name="arrivalAreasOfInterest"
+            className={styles.textarea}
+            placeholder="Arrival Areas of Interest"
+          ></textarea>
+          {loading ? (
+            <button className={styles.button}>
+              <i class="bx bx-loader-alt bx-spin"></i>
+            </button>
+          ) : (
+            <button onClick={handleSubmit} className={styles.button}>
+              Submit
+            </button>
+          )}
         </div>
-        <h3 className={styles.label}>
-          Which Membership Tier Are You Interested In?
-        </h3>
-        <div className={styles.checkboxWrapperContainer}>
-          <div
-            className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
-          >
-            <div
-              className={`${styles.checkbox} ${styles.checkbox2}`}
-              onClick={() => handleCheckbox2(0, "GOLD")}
-            >
-              <i class="bx bx-check"></i>
-            </div>
-            <h4 className={styles.checkboxText}>GOLD</h4>
-          </div>
-          <div
-            className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
-          >
-            <div
-              className={`${styles.checkbox} ${styles.checkbox2}`}
-              onClick={() => handleCheckbox2(1, "PLATINUM")}
-            >
-              <i class="bx bx-check"></i>
-            </div>
-            <h4 className={styles.checkboxText}>PLATINUM</h4>
-          </div>
-          <div
-            className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
-          >
-            <div
-              className={`${styles.checkbox} ${styles.checkbox2}`}
-              onClick={() => handleCheckbox2(2, "DIAMOND")}
-            >
-              <i class="bx bx-check"></i>
-            </div>
-            <h4 className={styles.checkboxText}>DIAMOND</h4>
-          </div>
-        </div>
-
-        <textarea
-          onChange={(e) => handleInput(e)}
-          name="departingAreasOfInterest"
-          className={styles.textarea}
-          placeholder="Departing Areas of Interest"
-        ></textarea>
-        <textarea
-          onChange={(e) => handleInput(e)}
-          name="arrivalAreasOfInterest"
-          className={styles.textarea}
-          placeholder="Arrival Areas of Interest"
-        ></textarea>
-        {loading ? (
-          <button className={styles.button}>
-            <i class="bx bx-loader-alt bx-spin"></i>
-          </button>
-        ) : (
-          <button onClick={handleSubmit} className={styles.button}>
-            Submit
-          </button>
-        )}
       </div>
-    </div>
+    </>
   );
 };
 

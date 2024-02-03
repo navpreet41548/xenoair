@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/styles/Membership.module.css";
 import Layout from "../../components/Layout";
 import Link from "next/link";
+import Head from "next/head";
 
 const Enterprice = () => {
   const handleHeaderClick = (index) => {
@@ -69,208 +70,81 @@ const Enterprice = () => {
     arrowIcon.classList.toggle(styles.arrowIconActive);
   };
   return (
-    <div className={styles.container}>
-      <h1 className={styles.heading}>Membership Tiers</h1>
-      <p className={styles.para}>
-        From those looking for a sprinkle of luxury to those demanding the full
-        white-glove experience, we've got a package tailored for every occasion.
-        From business excursions to lavish getaways, we ensure your journey is
-        unparalleled.
-      </p>
-      <p className={styles.smallPara}>
-        Start with a $0 initiation fee, add your chosen initial block fund, and
-        maintain your exclusive services with a $5,000 annual renewal fee.
-      </p>
-      <p className={styles.smallPara}>
-        Note: At renewal, ensure your account balance is equal to 10% of the
-        initial funding amount; if not, a simple re-fund is all it takes to
-        continue your luxury experience.
-      </p>
-      <div className={styles.cardContainer}>
-        <div className={styles.card}>
-          <div className={styles.cardUpper}>
-            <h3 className={styles.planName}>SMALL ENTERPRISE</h3>
+    <>
+      <Head>
+        <title>ENTERPRISE</title>
+        <meta
+          name="description"
+          content="From those looking for a sprinkle of luxury to those demanding the full white-glove experience, we've got a package tailored for every occasion. From business excursions to lavish getaways, we ensure your journey is unparalleled"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/logo.png" />
+      </Head>
+      <div className={styles.container}>
+        <h1 className={styles.heading}>Enterprise Offerings</h1>
+        <p className={styles.para}>
+          From those looking for a sprinkle of luxury to those demanding the
+          full white-glove experience, we've got a package tailored for every
+          occasion. From business excursions to lavish getaways, we ensure your
+          journey is unparalleled.
+        </p>
+        <p className={styles.smallPara}>
+          Start with a $0 initiation fee, add your chosen initial block fund,
+          and maintain your exclusive services with a $5,000 annual renewal fee.
+        </p>
+        <p className={styles.smallPara}>
+          Note: At renewal, ensure your account balance is equal to 10% of the
+          initial funding amount; if not, a simple re-fund is all it takes to
+          continue your luxury experience.
+        </p>
+        <div className={styles.cardContainer}>
+          <div className={styles.card}>
+            <div className={styles.cardUpper}>
+              <h3 className={styles.planName}>SMALL ENTERPRISE</h3>
 
-            <p className={styles.cardPoint}>
-              Unlimited flights at member pricing
-            </p>
-            <p className={styles.cardPoint}>Unlimited lead passengers</p>
-            <p className={styles.cardPoint}>
-              365 day access with 48 hour notice
-            </p>
-            <div className={styles.includedSection}>
-              <h4 className={styles.cardHeading}>
-                Included fee with membership
-              </h4>
-              <ul className={styles.checklist}>
-                <li className={styles.checklistItem}>
-                  <i class="bx bxs-check-circle"></i>
-                  <p className={styles.checklistText}>Chauffeur Services</p>
-                </li>
-              </ul>
-
-              <div className={styles.dropdownContainer}>
-                <div
-                  className={styles.dropdownHeader}
-                  onClick={() => handleHeaderClick(0)}
-                >
-                  <h4 className={styles.cardHeading}>
-                    Ability to purchase add-ons:
-                  </h4>
-                  <div className={styles.arrowIcon}>
-                    <i class="bx bxs-chevron-down"></i>
-                  </div>
-                </div>
-                <ul className={styles.addOnList}>
-                  <li className={styles.addOnListItem}>Chauffeur Services</li>
-                  <li className={styles.addOnListItem}>Stating Services</li>
-                  <li className={styles.addOnListItem}>Security Services</li>
-                  <li className={styles.addOnListItem}>
-                    Professional Photography
-                  </li>
-                  <li className={styles.addOnListItem}>Exotic Car Rentals</li>
-                  <li className={styles.addOnListItem}>
-                    Flight Attendant Upon Request
+              <p className={styles.cardPoint}>
+                Unlimited flights at member pricing
+              </p>
+              <p className={styles.cardPoint}>Unlimited lead passengers</p>
+              <p className={styles.cardPoint}>
+                365 day access with 48 hour notice
+              </p>
+              <div className={styles.includedSection}>
+                <h4 className={styles.cardHeading}>
+                  Included fee with membership
+                </h4>
+                <ul className={styles.checklist}>
+                  <li className={styles.checklistItem}>
+                    <i class="bx bxs-check-circle"></i>
+                    <p className={styles.checklistText}>Chauffeur Services</p>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-          <a
-            href={
-              "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
-            }
-            className={styles.button}
-          >
-            Get Started
-          </a>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.cardUpper}>
-            <h3 className={styles.planName}>MEDIUM ENTERPRISE</h3>
-            <p className={styles.cardPoint}>
-              Unlimited flights at member pricing
-            </p>
-            <p className={styles.cardPoint}>Unlimited lead passengers</p>
-            <p className={styles.cardPoint}>
-              365 day access with 48 hour notice
-            </p>
-            <div className={styles.includedSection}>
-              <h4 className={styles.cardHeading}>
-                Included fee with membership
-              </h4>
-              <ul className={styles.checklist}>
-                <li className={styles.checklistItem}>
-                  <i class="bx bxs-check-circle"></i>
-                  <p className={styles.checklistText}>Chauffeur Services</p>
-                </li>
-                <li className={styles.checklistItem}>
-                  <i class="bx bxs-check-circle"></i>
-                  <p className={styles.checklistText}>Staging Services</p>
-                </li>
-                <li className={styles.checklistItem}>
-                  <i class="bx bxs-check-circle"></i>
-                  <p className={styles.checklistText}>
-                    A catered meal per person on the flight
-                  </p>
-                </li>
-              </ul>
 
-              <div className={styles.dropdownContainer}>
-                <div
-                  className={styles.dropdownHeader}
-                  onClick={() => handleHeaderClick(1)}
-                >
-                  <h4 className={styles.cardHeading}>
-                    Ability to purchase add-ons:
-                  </h4>
-                  <div className={styles.arrowIcon}>
-                    <i class="bx bxs-chevron-down"></i>
+                <div className={styles.dropdownContainer}>
+                  <div
+                    className={styles.dropdownHeader}
+                    onClick={() => handleHeaderClick(0)}
+                  >
+                    <h4 className={styles.cardHeading}>
+                      Ability to purchase add-ons:
+                    </h4>
+                    <div className={styles.arrowIcon}>
+                      <i class="bx bxs-chevron-down"></i>
+                    </div>
                   </div>
+                  <ul className={styles.addOnList}>
+                    <li className={styles.addOnListItem}>Chauffeur Services</li>
+                    <li className={styles.addOnListItem}>Stating Services</li>
+                    <li className={styles.addOnListItem}>Security Services</li>
+                    <li className={styles.addOnListItem}>
+                      Professional Photography
+                    </li>
+                    <li className={styles.addOnListItem}>Exotic Car Rentals</li>
+                    <li className={styles.addOnListItem}>
+                      Flight Attendant Upon Request
+                    </li>
+                  </ul>
                 </div>
-                <ul className={styles.addOnList}>
-                  <li className={styles.addOnListItem}>Security Services</li>
-                  <li className={styles.addOnListItem}>
-                    Professional Photography
-                  </li>
-                  <li className={styles.addOnListItem}>Exotic Car Services</li>
-                  <li className={styles.addOnListItem}>In-flight Catering</li>
-                  <li className={styles.addOnListItem}>
-                    Flight Attendant Upon Request
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <a
-            href={
-              "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
-            }
-            className={styles.button}
-          >
-            Get Started
-          </a>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.cardUpper}>
-            <h3 className={styles.planName}>LARGE ENTERPRISE</h3>
-            <p className={styles.cardPoint}>
-              Unlimited flights at member pricing
-            </p>
-            <p className={styles.cardPoint}>Unlimited lead passengers</p>
-            <p className={styles.cardPoint}>
-              365 day access with 48 hour notice
-            </p>
-            <div className={styles.includedSection}>
-              <h4 className={styles.cardHeading}>
-                Included fee with membership
-              </h4>
-              <ul className={styles.checklist}>
-                <li className={styles.checklistItem}>
-                  <i class="bx bxs-check-circle"></i>
-                  <p className={styles.checklistText}>Chauffeur Services</p>
-                </li>
-                <li className={styles.checklistItem}>
-                  <i class="bx bxs-check-circle"></i>
-                  <p className={styles.checklistText}>Staging Services</p>
-                </li>
-                <li className={styles.checklistItem}>
-                  <i class="bx bxs-check-circle"></i>
-                  <p className={styles.checklistText}>
-                    Professional Photography
-                  </p>
-                </li>
-                <li className={styles.checklistItem}>
-                  <i class="bx bxs-check-circle"></i>
-                  <p className={styles.checklistText}>
-                    A catered meal per person on the flight
-                  </p>
-                </li>
-                <li className={styles.checklistItem}>
-                  <i class="bx bxs-check-circle"></i>
-                  <p className={styles.checklistText}>
-                    Flight attendant upon request
-                  </p>
-                </li>
-              </ul>
-
-              <div className={styles.dropdownContainer}>
-                <div
-                  className={styles.dropdownHeader}
-                  onClick={() => handleHeaderClick(2)}
-                >
-                  <h4 className={styles.cardHeading}>
-                    Ability to purchase add-ons:
-                  </h4>
-                  <div className={styles.arrowIcon}>
-                    <i class="bx bxs-chevron-down"></i>
-                  </div>
-                </div>
-                <ul className={styles.addOnList}>
-                  <li className={styles.addOnListItem}>Security Services</li>
-                  <li className={styles.addOnListItem}>Exotic Car Services</li>
-                  <li className={styles.addOnListItem}>In-flight Catering</li>
-                </ul>
               </div>
             </div>
             <a
@@ -282,295 +156,441 @@ const Enterprice = () => {
               Get Started
             </a>
           </div>
-        </div>
-      </div>
-
-      <div className={styles.compareWrapper}>
-        <div className={styles.compareContainer}>
-          <div className={styles.col1}>
-            <div className={styles.colHeader}>
-              <h3 className={styles.compareHeading}>Compare plans</h3>
-              <p className={styles.comparePara}>
-                Find one that's right for you
+          <div className={styles.card}>
+            <div className={styles.cardUpper}>
+              <h3 className={styles.planName}>MEDIUM ENTERPRISE</h3>
+              <p className={styles.cardPoint}>
+                Unlimited flights at member pricing
               </p>
+              <p className={styles.cardPoint}>Unlimited lead passengers</p>
+              <p className={styles.cardPoint}>
+                365 day access with 48 hour notice
+              </p>
+              <div className={styles.includedSection}>
+                <h4 className={styles.cardHeading}>
+                  Included fee with membership
+                </h4>
+                <ul className={styles.checklist}>
+                  <li className={styles.checklistItem}>
+                    <i class="bx bxs-check-circle"></i>
+                    <p className={styles.checklistText}>Chauffeur Services</p>
+                  </li>
+                  <li className={styles.checklistItem}>
+                    <i class="bx bxs-check-circle"></i>
+                    <p className={styles.checklistText}>Staging Services</p>
+                  </li>
+                  <li className={styles.checklistItem}>
+                    <i class="bx bxs-check-circle"></i>
+                    <p className={styles.checklistText}>
+                      A catered meal per person on the flight
+                    </p>
+                  </li>
+                </ul>
+
+                <div className={styles.dropdownContainer}>
+                  <div
+                    className={styles.dropdownHeader}
+                    onClick={() => handleHeaderClick(1)}
+                  >
+                    <h4 className={styles.cardHeading}>
+                      Ability to purchase add-ons:
+                    </h4>
+                    <div className={styles.arrowIcon}>
+                      <i class="bx bxs-chevron-down"></i>
+                    </div>
+                  </div>
+                  <ul className={styles.addOnList}>
+                    <li className={styles.addOnListItem}>Security Services</li>
+                    <li className={styles.addOnListItem}>
+                      Professional Photography
+                    </li>
+                    <li className={styles.addOnListItem}>
+                      Exotic Car Services
+                    </li>
+                    <li className={styles.addOnListItem}>In-flight Catering</li>
+                    <li className={styles.addOnListItem}>
+                      Flight Attendant Upon Request
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>
-                Unlimited Flights at Member's Price
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>Unlimited Lead Passengers</h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>
-                365 Day Access with 48 Hour Notice
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>Chauffeur Services</h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>Staging Services</h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>Professional Photography</h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>A Catered Meal Per Person</h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>
-                Flight Attendant Upon Request
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>Exotic Car Rentals</h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>
-                In-Flight Catering Services
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={styles.sideHeading}>Security Services</h4>
-            </div>
+            <a
+              href={
+                "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+              }
+              className={styles.button}
+            >
+              Get Started
+            </a>
           </div>
-          <div className={styles.col2}>
-            <div className={styles.colHeader}>
-              <h3 className={styles.planHeading}>SMALL</h3>
+          <div className={styles.card}>
+            <div className={styles.cardUpper}>
+              <h3 className={styles.planName}>LARGE ENTERPRISE</h3>
+              <p className={styles.cardPoint}>
+                Unlimited flights at member pricing
+              </p>
+              <p className={styles.cardPoint}>Unlimited lead passengers</p>
+              <p className={styles.cardPoint}>
+                365 day access with 48 hour notice
+              </p>
+              <div className={styles.includedSection}>
+                <h4 className={styles.cardHeading}>
+                  Included fee with membership
+                </h4>
+                <ul className={styles.checklist}>
+                  <li className={styles.checklistItem}>
+                    <i class="bx bxs-check-circle"></i>
+                    <p className={styles.checklistText}>Chauffeur Services</p>
+                  </li>
+                  <li className={styles.checklistItem}>
+                    <i class="bx bxs-check-circle"></i>
+                    <p className={styles.checklistText}>Staging Services</p>
+                  </li>
+                  <li className={styles.checklistItem}>
+                    <i class="bx bxs-check-circle"></i>
+                    <p className={styles.checklistText}>
+                      Professional Photography
+                    </p>
+                  </li>
+                  <li className={styles.checklistItem}>
+                    <i class="bx bxs-check-circle"></i>
+                    <p className={styles.checklistText}>
+                      A catered meal per person on the flight
+                    </p>
+                  </li>
+                  <li className={styles.checklistItem}>
+                    <i class="bx bxs-check-circle"></i>
+                    <p className={styles.checklistText}>
+                      Flight attendant upon request
+                    </p>
+                  </li>
+                </ul>
+
+                <div className={styles.dropdownContainer}>
+                  <div
+                    className={styles.dropdownHeader}
+                    onClick={() => handleHeaderClick(2)}
+                  >
+                    <h4 className={styles.cardHeading}>
+                      Ability to purchase add-ons:
+                    </h4>
+                    <div className={styles.arrowIcon}>
+                      <i class="bx bxs-chevron-down"></i>
+                    </div>
+                  </div>
+                  <ul className={styles.addOnList}>
+                    <li className={styles.addOnListItem}>Security Services</li>
+                    <li className={styles.addOnListItem}>
+                      Exotic Car Services
+                    </li>
+                    <li className={styles.addOnListItem}>In-flight Catering</li>
+                  </ul>
+                </div>
+              </div>
               <a
                 href={
                   "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
                 }
-                className={styles.planButton}
+                className={styles.button}
               >
                 Get Started
               </a>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                <i class="bx bxs-x-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-          </div>
-          <div className={styles.col3}>
-            <div className={styles.colHeader}>
-              <h3 className={styles.planHeading}>MEDIUM</h3>
-              <a
-                href={
-                  "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
-                }
-                className={styles.planButton}
-              >
-                Get Started
-              </a>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-          </div>
-          <div className={styles.col4}>
-            <div className={styles.colHeader}>
-              <h3 className={styles.planHeading}>DIAMOND</h3>
-              <a
-                href={
-                  "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
-                }
-                className={styles.planButton}
-              >
-                Get Started
-              </a>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
-                <i class="bx bxs-check-circle"></i>
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
-            </div>
-            <div className={styles.colBody}>
-              <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                Add-On
-              </h4>
             </div>
           </div>
         </div>
-      </div>
 
-      <h4 className={styles.swipeHeading}>
-        <i class="bx bxs-chevrons-left"></i>Swipe
-        <i class="bx bxs-chevrons-right"></i>
-      </h4>
-
-      <h2 className={styles.heading}>Benefits</h2>
-      <div className={styles.faqWrapper}>
-        {faqData.map((item, i) => (
-          <>
-            <div
-              className={styles.question}
-              onClick={() => handleQuestionClick(i)}
-            >
-              <div className={styles.icon}>
-                <i className="bx bxs-plane-alt"></i>
+        <div className={styles.compareWrapper}>
+          <div className={styles.compareContainer}>
+            <div className={styles.col1}>
+              <div className={styles.colHeader}>
+                <h3 className={styles.compareHeading}>Compare plans</h3>
+                <p className={styles.comparePara}>
+                  Find one that's right for you
+                </p>
               </div>
-              <h4 className={styles.questionText}>{item.question}</h4>
-              <div className={styles.arrowIconFaq}>
-                <i className="bx bxs-chevron-down"></i>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>
+                  Unlimited Flights at Member's Price
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>
+                  Unlimited Lead Passengers
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>
+                  365 Day Access with 48 Hour Notice
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>Chauffeur Services</h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>Staging Services</h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>Professional Photography</h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>
+                  A Catered Meal Per Person
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>
+                  Flight Attendant Upon Request
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>Exotic Car Rentals</h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>
+                  In-Flight Catering Services
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={styles.sideHeading}>Security Services</h4>
               </div>
             </div>
-            <div className={styles.answer}>
-              <p className={styles.answerPara}>{item.answer}</p>
+            <div className={styles.col2}>
+              <div className={styles.colHeader}>
+                <h3 className={styles.planHeading}>SMALL</h3>
+                <a
+                  href={
+                    "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+                  }
+                  className={styles.planButton}
+                >
+                  Get Started
+                </a>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  <i class="bx bxs-x-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
             </div>
-          </>
-        ))}
+            <div className={styles.col3}>
+              <div className={styles.colHeader}>
+                <h3 className={styles.planHeading}>MEDIUM</h3>
+                <a
+                  href={
+                    "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+                  }
+                  className={styles.planButton}
+                >
+                  Get Started
+                </a>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+            </div>
+            <div className={styles.col4}>
+              <div className={styles.colHeader}>
+                <h3 className={styles.planHeading}>DIAMOND</h3>
+                <a
+                  href={
+                    "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"
+                  }
+                  className={styles.planButton}
+                >
+                  Get Started
+                </a>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+              <div className={styles.colBody}>
+                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
+                  Add-On
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 className={styles.swipeHeading}>
+          <i class="bx bxs-chevrons-left"></i>Swipe
+          <i class="bx bxs-chevrons-right"></i>
+        </h4>
+
+        <h2 className={styles.heading}>Benefits</h2>
+        <div className={styles.faqWrapper}>
+          {faqData.map((item, i) => (
+            <>
+              <div
+                className={styles.question}
+                onClick={() => handleQuestionClick(i)}
+              >
+                <div className={styles.icon}>
+                  <i className="bx bxs-plane-alt"></i>
+                </div>
+                <h4 className={styles.questionText}>{item.question}</h4>
+                <div className={styles.arrowIconFaq}>
+                  <i className="bx bxs-chevron-down"></i>
+                </div>
+              </div>
+              <div className={styles.answer}>
+                <p className={styles.answerPara}>{item.answer}</p>
+              </div>
+            </>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { toast } from "react-toastify";
+import Head from "next/head";
 
 const Contact = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -98,6 +99,15 @@ const Contact = () => {
 
   return (
     <>
+      <Head>
+        <title>CONTACT</title>
+        <meta
+          name="description"
+          content="We will reach out to you as soon as we can"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/logo.png" />
+      </Head>
       <div className={styles.container}>
         <div className={styles.form}>
           <h2 className={styles.formHeading}>Fill Out the Form</h2>

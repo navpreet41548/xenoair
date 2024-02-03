@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { ToastContainer, toast } from "react-toastify";
+import Head from "next/head";
 
 const Book = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -121,6 +122,12 @@ const Book = () => {
   };
   return (
     <>
+      <Head>
+        <title>BOOK</title>
+        <meta name="description" content="You can attach a custom message" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/logo.png" />
+      </Head>
       <div className={styles.container}>
         <div className={styles.form}>
           <h2 className={styles.formHeading}>Fill Out the Form</h2>

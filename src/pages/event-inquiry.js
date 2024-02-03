@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { toast } from "react-toastify";
+import Head from "next/head";
 
 const EventInquiry = () => {
   const [loading, setLoading] = useState(false);
@@ -98,6 +99,15 @@ const EventInquiry = () => {
 
   return (
     <>
+      <Head>
+        <title>EVENT INQUIRY</title>
+        <meta
+          name="description"
+          content="Whether it's a wedding, corporate event, or birthday celebration, we're here to make it unforgettable. Click the 'Contact Us' button below to get in touch. Let's turn your vision into a remarkable event together."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/logo.png" />
+      </Head>
       <div className={styles.container}>
         <div className={styles.form}>
           <h2 className={styles.formHeading}>Fill Out the Form</h2>

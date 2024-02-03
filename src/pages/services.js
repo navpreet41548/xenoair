@@ -77,9 +77,11 @@ const Services = () => {
           </div>
           <motion.div
             whileInView={{
+              transform: "scale(1)",
               opacity: 1,
             }}
             initial={{
+              transform: "scale(0.5)",
               opacity: 0,
             }}
             viewport={{ once: true }}
@@ -103,9 +105,11 @@ const Services = () => {
           <motion.div
             whileInView={{
               opacity: 1,
+              transform: "scale(1)",
             }}
             initial={{
               opacity: 0,
+              transform: "scale(0.5)",
             }}
             viewport={{ once: true }}
             transition={{
@@ -183,9 +187,12 @@ const Services = () => {
           </div>
           <motion.div
             whileInView={{
+              transform: "scale(1)",
               opacity: 1,
             }}
             initial={{
+              transform: "scale(0.5)",
+
               opacity: 0,
             }}
             viewport={{ once: true }}

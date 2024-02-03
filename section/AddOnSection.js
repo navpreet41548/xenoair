@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/AddOnSection.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const AddOnSection = () => {
   const [selectedService, setSelectedService] = useState({
@@ -68,7 +69,21 @@ const AddOnSection = () => {
       </p>
 
       <div className={styles.cardContainer}>
-        <div className={`${styles.card} ${styles.cardAddOn}`}>
+        <motion.div
+          whileInView={{
+            transform: "translateX(0%)",
+            opacity: 1,
+          }}
+          initial={{
+            transform: "translateX(-50%)",
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.5,
+          }}
+          className={`${styles.card} ${styles.cardAddOn}`}
+        >
           <Image
             className={`${styles.addOnImage} ${styles.addOnImageActive}`}
             src={`/images/addOns/addOn1.png`}
@@ -121,8 +136,22 @@ const AddOnSection = () => {
             <h2 className={styles.cardHeading}>{selectedService.heading}</h2>
             <p className={styles.cardPara}>{selectedService.para}</p>
           </div>
-        </div>
-        <div className={styles.card}>
+        </motion.div>
+        <motion.div
+          whileInView={{
+            transform: "translateX(0%)",
+            opacity: 1,
+          }}
+          initial={{
+            transform: "translateX(50%)",
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.5,
+          }}
+          className={styles.card}
+        >
           <Image
             className={styles.addOnImage}
             src={"/images/addOns/background.png"}
@@ -186,7 +215,7 @@ const AddOnSection = () => {
               06 In-flight Catering
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

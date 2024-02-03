@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/styles/AboutSection.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
@@ -9,9 +10,25 @@ const AboutSection = () => {
       <div className={styles.left}>
         <div className={styles.content}>
           <h3 className={styles.tagLine}>ABOUT US</h3>
-          <h2 className={styles.mainHeading}>
-            We Have Best Luxury Services For You
-          </h2>
+          <motion.div
+            whileInView={{
+              transform: "translateY(0%) rotate(0)",
+              opacity: 1,
+            }}
+            initial={{
+              transform: "translateY(120%) rotate(10deg)",
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.6,
+            }}
+            className={styles.headingWrapper}
+          >
+            <h2 className={styles.mainHeading}>
+              We Have Best Luxury Services For You
+            </h2>
+          </motion.div>
           <p className={styles.mainPara}>
             With our meticulous focus on curating individualized flight
             experiences, we cater to the nuanced needs of high-value executives
@@ -38,7 +55,21 @@ const AboutSection = () => {
           />
 
           <div className={styles.cardSubContainer}>
-            <div className={styles.card}>
+            <motion.div
+              whileInView={{
+                transform: "scale(1)",
+                opacity: 1,
+              }}
+              initial={{
+                transform: "scale(0)",
+                opacity: 0,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.6,
+              }}
+              className={styles.card}
+            >
               <Image
                 className={styles.icon}
                 src={"/images/about/icon1.png"}
@@ -51,8 +82,22 @@ const AboutSection = () => {
                 planned to deliver the highest standards of luxury and
                 convenience.
               </p>
-            </div>
-            <div className={styles.card}>
+            </motion.div>
+            <motion.div
+              whileInView={{
+                transform: "scale(1)",
+                opacity: 1,
+              }}
+              initial={{
+                transform: "scale(0)",
+                opacity: 0,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.8,
+              }}
+              className={styles.card}
+            >
               <Image
                 className={styles.icon}
                 src={"/images/about/icon2.png"}
@@ -64,10 +109,24 @@ const AboutSection = () => {
                 Despite our high-end services, our pricing remains competitive,
                 giving clients excellent value for their money.
               </p>
-            </div>
+            </motion.div>
           </div>
           <div className={styles.cardSubContainer}>
-            <div className={`${styles.card} ${styles.cardActive}`}>
+            <motion.div
+              whileInView={{
+                transform: "scale(1)",
+                opacity: 1,
+              }}
+              initial={{
+                transform: "scale(0)",
+                opacity: 0,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 1,
+              }}
+              className={`${styles.card} ${styles.cardActive}`}
+            >
               <Image
                 className={styles.icon}
                 src={"/images/about/icon3.png"}
@@ -80,8 +139,22 @@ const AboutSection = () => {
                 planned to deliver the highest standards of luxury and
                 convenience.
               </p>
-            </div>
-            <div className={styles.card}>
+            </motion.div>
+            <motion.div
+              whileInView={{
+                transform: "scale(1)",
+                opacity: 1,
+              }}
+              initial={{
+                transform: "scale(0)",
+                opacity: 0,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 1.2,
+              }}
+              className={styles.card}
+            >
               <Image
                 className={styles.icon}
                 src={"/images/about/icon4.png"}
@@ -94,7 +167,7 @@ const AboutSection = () => {
                 planned to deliver the highest standards of luxury and
                 convenience.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

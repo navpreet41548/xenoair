@@ -101,7 +101,9 @@ const Contact = () => {
       <div className={styles.container}>
         <div className={styles.form}>
           <h2 className={styles.formHeading}>Fill Out the Form</h2>
-          <p className={styles.formPara}>Lorem ipsum some other heading</p>
+          <p className={styles.formPara}>
+            We will reach out to you as soon as we can
+          </p>
 
           <div className={styles.inputWrapper}>
             <input

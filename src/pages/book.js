@@ -124,7 +124,7 @@ const Book = () => {
       <div className={styles.container}>
         <div className={styles.form}>
           <h2 className={styles.formHeading}>Fill Out the Form</h2>
-          <p className={styles.formPara}>Lorem ipsum some other heading</p>
+          <p className={styles.formPara}>You can attach a custom message</p>
 
           <div className={styles.inputWrapper}>
             <input

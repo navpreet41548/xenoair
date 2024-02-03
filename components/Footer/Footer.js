@@ -8,14 +8,14 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerUpper}>
-        <div className={styles.col1}>
+        <Link href={"/"} className={styles.col1}>
           <Image
             src={"/images/logo.png"}
             width={200}
             height={200}
             className={styles.logo}
           />
-        </div>
+        </Link>
         <div className={styles.col2}>
           <h3 className={styles.colHeading}>Helpful</h3>
           <Link href={"/"} className={styles.colPara}>

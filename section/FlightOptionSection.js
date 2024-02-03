@@ -1,13 +1,26 @@
 import React from "react";
 import styles from "@/styles/FlightOptionSection.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const FlightOptionSection = () => {
   return (
     <div className={styles.container} id="flightOptions">
       <h2 className={styles.heading}>Flight Options</h2>
       <div className={styles.cardContainer}>
-        <div className={styles.card}>
+        <motion.div
+          whileInView={{
+            opacity: 1,
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.5,
+          }}
+          className={styles.card}
+        >
           <div className={styles.cardHeader}>
             <Image
               className={styles.icon}
@@ -26,9 +39,21 @@ const FlightOptionSection = () => {
             desired route, and let XenoAir handle the rest, ensuring an
             impeccable and seamless travel experience for you and your guests.
           </p>
-        </div>
+        </motion.div>
 
-        <div className={styles.card}>
+        <motion.div
+          whileInView={{
+            opacity: 1,
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.5,
+          }}
+          className={styles.card}
+        >
           <div className={styles.cardHeader}>
             <Image
               className={styles.icon}
@@ -47,7 +72,7 @@ const FlightOptionSection = () => {
             meticulously crafted around your desires. With XenoAir's on-demand
             services, the sky isn't the limit; it's just the beginning.
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

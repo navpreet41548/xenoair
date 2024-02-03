@@ -108,7 +108,9 @@ const WeeklyDeals = () => {
     <div className={`${styles.container} ${styles.smallFormContainer}`}>
       <div className={styles.form}>
         <h2 className={styles.formHeading}>Fill Out the Form</h2>
-        <p className={styles.formPara}>Lorem ipsum some other heading</p>
+        <p className={styles.formPara}>
+          Sign up for receiving update about our new deals
+        </p>
 
         <div className={styles.inputWrapper}>
           <input

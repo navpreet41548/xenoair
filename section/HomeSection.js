@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import styles from "@/styles/HomeSection.module.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 const HomeSection = () => {
   const handleArrowClick = () => {
     const rightContainer = document.getElementsByClassName(styles.right)[0];
@@ -15,9 +17,25 @@ const HomeSection = () => {
           <h3 className={styles.tagLine}>
             <span className={styles.diff}>XENO</span>AIR
           </h3>
-          <h1 className={styles.mainHeading}>
-            Anytime, Anywhere, We're Here for Your Travel Needs
-          </h1>
+          <div className={styles.headingWrapper}>
+            <motion.h1
+              whileInView={{
+                transform: "translateY(0%) rotate(0)",
+                opacity: 1,
+              }}
+              initial={{
+                transform: "translateY(120%) rotate(10deg)",
+                opacity: 0,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.6,
+              }}
+              className={styles.mainHeading}
+            >
+              Anytime, Anywhere, We're Here for Your Travel Needs
+            </motion.h1>
+          </div>
           <p className={styles.para}>
             Anytime, anywhere, by land, by air, or by sea we look forward to
             serving your friends, family, or companies travel needs.
@@ -35,7 +53,21 @@ const HomeSection = () => {
           </div>
         </div>
       </div>
-      <div className={styles.right}>
+      <motion.div
+        whileInView={{
+          opacity: 1,
+          transform: "translateY(0%) ",
+        }}
+        initial={{
+          opacity: 0,
+          transform: "translateY(100%) ",
+        }}
+        viewport={{ once: true }}
+        transition={{
+          delay: 0.6,
+        }}
+        className={styles.right}
+      >
         <div className={styles.arrowIcon}>
           <Image
             onClick={handleArrowClick}
@@ -90,21 +122,63 @@ const HomeSection = () => {
             alt="Airplane Image"
           />
         </div>
-      </div>
+      </motion.div>
 
       <div className={styles.socialContainer}>
-        <a
+        <motion.a
+          whileInView={{
+            transform: "scale(1)",
+            opacity: 1,
+          }}
+          initial={{
+            transform: "scale(0)",
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.6,
+          }}
           href={"https://www.instagram.com/officialxenoair"}
           className={styles.socialIcon}
         >
           <i class="bx bxl-instagram"></i>
-        </a>
-        <Link href={"/"} className={styles.socialIcon}>
+        </motion.a>
+        <motion.a
+          whileInView={{
+            transform: "scale(1)",
+            opacity: 1,
+          }}
+          initial={{
+            transform: "scale(0)",
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.6,
+          }}
+          href={"/"}
+          className={styles.socialIcon}
+        >
           <i class="bx bxl-facebook"></i>
-        </Link>
-        <a href={"mailto:info@xenoair.com"} className={styles.socialIcon}>
+        </motion.a>
+        <motion.a
+          whileInView={{
+            transform: "scale(1)",
+            opacity: 1,
+          }}
+          initial={{
+            transform: "scale(0)",
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.6,
+          }}
+          href={"mailto:info@xenoair.com"}
+          className={styles.socialIcon}
+        >
           <i class="bx bx-envelope"></i>
-        </a>
+        </motion.a>
       </div>
 
       <Image

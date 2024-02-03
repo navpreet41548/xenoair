@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.nav} ref={navRef}>
-      <div className={styles.navLeft}>
+      <Link href={"/"} className={styles.navLeft}>
         <Image
           className={styles.logo}
           width={300}
@@ -54,7 +54,7 @@ const Navbar = () => {
           alt="Logo"
           src={"/images/logo.png"}
         />
-      </div>
+      </Link>
       <ul className={styles.navCenter} ref={menuRef}>
         <li>
           <Link className={styles.navLink} href={"/"}>

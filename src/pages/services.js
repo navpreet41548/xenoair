@@ -2,11 +2,30 @@ import React from "react";
 import styles from "@/styles/Services.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.mainHeading}>Your Trusted Jet Brokerage Partner</h1>
+      <div className={styles.headingWrapper}>
+        <motion.h1
+          whileInView={{
+            transform: "translateY(0%)",
+            opacity: 1,
+          }}
+          initial={{
+            transform: "translateY(-50%)",
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.5,
+          }}
+          className={styles.mainHeading}
+        >
+          Your Trusted Jet Brokerage Partner
+        </motion.h1>
+      </div>
       <p className={styles.mainPara}>
         Trust us to handle your private jet transactions. We connect buyers and
         sellers, ensuring a seamless process. Buy or sell with confidence.
@@ -17,9 +36,23 @@ const Services = () => {
 
       <div className={styles.serviceContainer}>
         <div className={styles.contentPart}>
-          <h2 className={styles.serviceHeading}>
+          <motion.h2
+            whileInView={{
+              transform: "translateY(0%)",
+              opacity: 1,
+            }}
+            initial={{
+              transform: "translateY(-50%)",
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.5,
+            }}
+            className={styles.serviceHeading}
+          >
             Aircraft Sales & Acquisition
-          </h2>
+          </motion.h2>
           <p className={styles.servicePara}>
             The world of private jet ownership opens up unparalleled
             possibilities for travel. We've been privileged to assist numerous
@@ -30,7 +63,19 @@ const Services = () => {
             Contact Us
           </Link>
         </div>
-        <div className={styles.imageContainer}>
+        <motion.div
+          whileInView={{
+            opacity: 1,
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.5,
+          }}
+          className={styles.imageContainer}
+        >
           <Image
             className={styles.serviceImage}
             src={"/images/services/image1.png"}
@@ -38,12 +83,24 @@ const Services = () => {
             height={1000}
             alt="Private Jet Images"
           />
-        </div>
+        </motion.div>
       </div>
       <div
         className={` ${styles.serviceContainer} ${styles.serviceContainerMiddle}`}
       >
-        <div className={styles.imageContainer}>
+        <motion.div
+          whileInView={{
+            opacity: 1,
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.5,
+          }}
+          className={styles.imageContainer}
+        >
           <Image
             className={styles.serviceImage}
             src={"/images/services/image1.png"}
@@ -51,9 +108,25 @@ const Services = () => {
             height={1000}
             alt="Private Jet Images"
           />
-        </div>
+        </motion.div>
         <div className={styles.contentPart}>
-          <h2 className={styles.serviceHeading}>Aircraft Leasing</h2>
+          <motion.h2
+            whileInView={{
+              transform: "translateY(0%)",
+              opacity: 1,
+            }}
+            initial={{
+              transform: "translateY(-50%)",
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.5,
+            }}
+            className={styles.serviceHeading}
+          >
+            Aircraft Leasing
+          </motion.h2>
           <p className={styles.servicePara}>
             Aircraft leasing offers an attractive alternative to ownership,
             allowing you to enjoy the privileges of private aviation without the
@@ -67,7 +140,23 @@ const Services = () => {
       </div>
       <div className={styles.serviceContainer}>
         <div className={styles.contentPart}>
-          <h2 className={styles.serviceHeading}>Aircraft Management</h2>
+          <motion.h2
+            whileInView={{
+              transform: "translateY(0%)",
+              opacity: 1,
+            }}
+            initial={{
+              transform: "translateY(-50%)",
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.5,
+            }}
+            className={styles.serviceHeading}
+          >
+            Aircraft Management
+          </motion.h2>
           <p className={styles.servicePara}>
             Experience worry-free aviation with our aircraft management
             services. We take care of all the complexities, from maintenance and
@@ -79,7 +168,19 @@ const Services = () => {
             Contact Us
           </Link>
         </div>
-        <div className={styles.imageContainer}>
+        <motion.div
+          whileInView={{
+            opacity: 1,
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.5,
+          }}
+          className={styles.imageContainer}
+        >
           <Image
             className={styles.serviceImage}
             src={"/images/services/image3.png"}
@@ -87,7 +188,7 @@ const Services = () => {
             height={1000}
             alt="Private Jet Images"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

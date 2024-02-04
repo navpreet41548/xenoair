@@ -33,8 +33,8 @@ const Footer = () => {
           <Link href={"/membership"} className={styles.colPara}>
             Membership
           </Link>
-          <Link href={"/enterprice"} className={styles.colPara}>
-            EnterPrices
+          <Link href={"/enterprise"} className={styles.colPara}>
+            Enterprise
           </Link>
           <Link href={"/weekly-deals"} className={styles.colPara}>
             Newsletter

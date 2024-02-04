@@ -120,7 +120,7 @@ const WeeklyDeals = () => {
         <div className={styles.form}>
           <h2 className={styles.formHeading}>Fill Out the Form</h2>
           <p className={styles.formPara}>
-            Sign up for receiving update about our new deals
+            Subscribe for weekly deal updates weekly via email
           </p>
 
           <div className={styles.inputWrapper}>

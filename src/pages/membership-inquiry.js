@@ -14,7 +14,6 @@ const MembershipInquiry = () => {
     contactMethod: "Phone Call",
     dateOfBirth: "",
     address: "",
-    weight: "",
     sex: "",
     membershipTier: "",
     departingAreasOfInterest: "",
@@ -57,7 +56,6 @@ const MembershipInquiry = () => {
       inquiryData.phone === "" ||
       inquiryData.dateOfBirth === "" ||
       inquiryData.address === "" ||
-      inquiryData.weight === "" ||
       inquiryData.sex === "" ||
       inquiryData.membershipTier === "" ||
       inquiryData.departingAreasOfInterest === "" ||
@@ -218,12 +216,6 @@ const MembershipInquiry = () => {
             className={styles.input}
             placeholder="Address"
           />
-          <input
-            onChange={(e) => handleInput(e)}
-            name="weight"
-            className={styles.input}
-            placeholder="Weight"
-          />
           <h3 className={styles.label}>Sex</h3>
           <div className={styles.checkboxWrapperContainer}>
             <div
@@ -247,6 +239,17 @@ const MembershipInquiry = () => {
                 <i class="bx bx-check"></i>
               </div>
               <h4 className={styles.checkboxText}>Female</h4>
+            </div>
+            <div
+              className={`${styles.checkboxWrapper} ${styles.checkboxWrapperSmall}`}
+            >
+              <div
+                className={`${styles.checkbox} ${styles.checkbox1}`}
+                onClick={() => handleCheckbox1(2, "Prefer Not to Say")}
+              >
+                <i class="bx bx-check"></i>
+              </div>
+              <h4 className={styles.checkboxText}>Prefer Not to Say</h4>
             </div>
           </div>
           <h3 className={styles.label}>

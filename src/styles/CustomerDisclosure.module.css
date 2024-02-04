@@ -2,47 +2,71 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 80vh;
-  padding-top: 150px;
   padding-bottom: 50px;
 }
 
-.content {
+.cardContainer {
   width: 90%;
-  max-width: 1000px;
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
 }
 
-.heading {
-  font-size: 30px;
-  color: white;
-  font-weight: 400 !important;
-  margin-top: 50px;
-  text-align: center;
+.card {
+  width: 45%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
 }
 
-.para {
-  text-align: center;
-  color: white;
+.cardHeading {
+  font-size: 20px;
+  color: var(--blue-text);
+  font-weight: 500 !important;
+}
+
+.cardPara {
+  color: var(--blue-text);
   margin: 10px 0;
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1450px) {
   .container {
     padding-top: 100px;
   }
-  .heading {
-    font-size: 20px;
+  .cardHeading {
+    font-size: 18px;
   }
-  .para {
-    font-size: 13px;
+  .cardPara {
+    font-size: 15px;
   }
 }
 
-@media screen and (max-width: 550px) {
-  .heading {
-    font-size: 17px;
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 48%;
   }
-  .para {
-    font-size: 11px;
+}
+@media screen and (max-width: 850px) {
+  .cardContainer {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cardHeading {
+    font-size: 15px;
+  }
+  .cardPara {
+    font-size: 12px;
+  }
+  .cardContainer {
+    padding-top: 50px;
   }
 }

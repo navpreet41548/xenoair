@@ -119,7 +119,7 @@ const Services = () => {
           >
             <Image
               className={styles.serviceImage}
-              src={"/images/services/image1.png"}
+              src={"/images/services/image2.png"}
               width={1000}
               height={1000}
               alt="Private Jet Images"

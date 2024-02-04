@@ -112,7 +112,7 @@ const Contact = () => {
         <div className={styles.form}>
           <h2 className={styles.formHeading}>Fill Out the Form</h2>
           <p className={styles.formPara}>
-            We will reach out to you as soon as we can
+            We will reach out with in 24 hrs to 48 hrs.
           </p>
 
           <div className={styles.inputWrapper}>

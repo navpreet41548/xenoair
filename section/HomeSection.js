@@ -156,10 +156,12 @@ const HomeSection = () => {
           transition={{
             delay: 0.6,
           }}
-          href={"/"}
+          href={
+            "https://discord.com/channels/@me/1169701285965086791/1203359729884209172"
+          }
           className={styles.socialIcon}
         >
-          <i class="bx bxl-facebook"></i>
+          <i class="bx bxl-linkedin-square"></i>
         </motion.a>
         <motion.a
           whileInView={{

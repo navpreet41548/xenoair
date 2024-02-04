@@ -26,13 +26,13 @@ const AboutSection = () => {
             className={styles.headingWrapper}
           >
             <h2 className={styles.mainHeading}>
-              We Have Best Luxury Services For You
+              Travel privately, anywhere, anytime.
             </h2>
           </motion.div>
           <p className={styles.mainPara}>
             With our meticulous focus on curating individualized flight
-            experiences, we cater to the nuanced needs of high-value executives
-            and luxury aficionados alike.
+            experiences, we cater to the nuanced needs of business-owners,
+            executives, entrepreneurs, and luxury aficionados alike.
           </p>
           <p className={styles.mainPara}>
             More than just a flight, XenoAir embodies a lifestyle. We don't just
@@ -135,9 +135,9 @@ const AboutSection = () => {
               />
               <h4 className={styles.cardHeading}>Elite Fleet</h4>
               <p className={styles.cardPara}>
-                From booking to landing, each XenoAir journey is meticulously
-                planned to deliver the highest standards of luxury and
-                convenience.
+                From light jets to global jets, our fleet is spans a wide
+                variety custom spec'd aircraft to accomodate any need and any
+                request you may have at anytime.
               </p>
             </motion.div>
             <motion.div
@@ -161,11 +161,11 @@ const AboutSection = () => {
                 width={200}
                 height={200}
               />
-              <h4 className={styles.cardHeading}>White-Glove Service</h4>
+              <h4 className={styles.cardHeading}>Unparalleled Add-Ons</h4>
               <p className={styles.cardPara}>
-                From booking to landing, each XenoAir journey is meticulously
-                planned to deliver the highest standards of luxury and
-                convenience.
+                Our ability to customize and personalize your enire travel
+                experience from your home to your home away, allows us to truly
+                serve at the pleasure of our customers.
               </p>
             </motion.div>
           </div>

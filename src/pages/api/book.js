@@ -24,11 +24,17 @@ export default async function handler(req, res) {
       },
     });
 
+    let returnDate;
+    if (req.body.returnDate == "") {
+      returnDate = "Not a round about trip";
+    } else {
+      returnDate = req.body.returnDate;
+    }
     var mailOptions = {
       from: "navwebdev2@gmail.com",
       // to: "navwebdev2@gmail.com ",
       to: "info@xenoair.com",
-      subject: `New Booking by ${firstName}`,
+      subject: `New Customer by ${firstName}`,
       text: ` 
         Name:${firstName} ${lastName}
         Email:${email}
@@ -36,6 +42,7 @@ export default async function handler(req, res) {
         Departure City:${departureCity}
         Arrival City:${arrivalCity}
         Departure Date:${departureDate}
+        Return Date:${returnDate}
         Number of Passengers:${numberOfPassengers}
         Custom Message:${customMessage}
          `,

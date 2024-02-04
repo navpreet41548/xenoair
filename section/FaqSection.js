@@ -52,12 +52,12 @@ const FaqSection = () => {
     {
       question: "What is the maximum number of passengers I can fly with?",
       answer:
-        "This varies depending on the aircraft you will be flying on. Our fleet sizes range from very light jets for 4-6 passengers to super heavy jets for 12-18 passengers. You will be notified of your maximum during the booking process.\n\nIf required, a larger jet for over 18+ passengers can be specially requested.",
+        "This varies depending on the aircraft you will be flying on. Our fleet sizes range from very light jets for 4-6 passengers to BBJ's or AirBus Jets that can seat 100+ passengers. Truly, we are here to serve at the pleasure of our customers and accomodate any needs you may have.",
     },
     {
       question: "Can I book flights online?",
       answer:
-        "Due to the number of operators we work with, we hit a hurdle when building a seamless online booking portal so we have decided to release this at a later date.",
+        "Yes, you can just fill out this form here (link here to the booking form) and we will coordinate your request asap.",
     },
     {
       question: "Am I able to book multi-stop trips?",
@@ -68,7 +68,7 @@ const FaqSection = () => {
       question:
         "Are in-flight meals and other services included with my booking?",
       answer:
-        "Majority of flights will have standard refreshments and snacks available for passengers, but the extent of in-flight amenities will vary depending on the size of the jet and length of the flight. If you would like specific amenities, please do not hesitate to ask your booking point of contact.",
+        "Yes, majority of flights will have standard refreshments and snacks available for passengers, but the extent of in-flight amenities will vary depending on the size of the jet and length of the flight. If you would like specific amenities, please do not hesitate to ask our team and we will be happy to help.",
     },
     {
       question: "What happens if my flight is cancelled?",
@@ -78,7 +78,7 @@ const FaqSection = () => {
     {
       question: "Can I bring pets on my flight?",
       answer:
-        "This is up to the discretion of the operator for your flight; please let us know ahead of time to ensure no problems arise.",
+        "Yes, we work with many operators that allow pets onboard the aircraft. Some additional information may be needed at the time of booking.",
     },
   ];
 

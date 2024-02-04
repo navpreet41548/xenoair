@@ -89,13 +89,10 @@ const Enterprice = () => {
           journey is unparalleled.
         </p>
         <p className={styles.smallPara}>
-          Start with a $0 initiation fee, add your chosen initial block fund,
-          and maintain your exclusive services with a $5,000 annual renewal fee.
-        </p>
-        <p className={styles.smallPara}>
-          Note: At renewal, ensure your account balance is equal to 10% of the
-          initial funding amount; if not, a simple re-fund is all it takes to
-          continue your luxury experience.
+          We'll customize an SLA and proposal to meet your enterprise's unique
+          travel needs, ensuring detailed compliance. Additionally, our
+          reporting system provides comprehensive insights and detailed
+          deliverables for a transparent overview of your travel management.
         </p>
         <div className={styles.cardContainer}>
           <div className={styles.card}>
@@ -136,9 +133,7 @@ const Enterprice = () => {
                     <li className={styles.addOnListItem}>Chauffeur Services</li>
                     <li className={styles.addOnListItem}>Stating Services</li>
                     <li className={styles.addOnListItem}>Security Services</li>
-                    <li className={styles.addOnListItem}>
-                      Professional Photography
-                    </li>
+                    <li className={styles.addOnListItem}>Professional Media</li>
                     <li className={styles.addOnListItem}>Exotic Car Rentals</li>
                     <li className={styles.addOnListItem}>
                       Flight Attendant Upon Request
@@ -201,9 +196,7 @@ const Enterprice = () => {
                   </div>
                   <ul className={styles.addOnList}>
                     <li className={styles.addOnListItem}>Security Services</li>
-                    <li className={styles.addOnListItem}>
-                      Professional Photography
-                    </li>
+                    <li className={styles.addOnListItem}>Professional Media</li>
                     <li className={styles.addOnListItem}>
                       Exotic Car Services
                     </li>
@@ -249,9 +242,7 @@ const Enterprice = () => {
                   </li>
                   <li className={styles.checklistItem}>
                     <i class="bx bxs-check-circle"></i>
-                    <p className={styles.checklistText}>
-                      Professional Photography
-                    </p>
+                    <p className={styles.checklistText}>Professional Media</p>
                   </li>
                   <li className={styles.checklistItem}>
                     <i class="bx bxs-check-circle"></i>
@@ -331,7 +322,7 @@ const Enterprice = () => {
                 <h4 className={styles.sideHeading}>Staging Services</h4>
               </div>
               <div className={styles.colBody}>
-                <h4 className={styles.sideHeading}>Professional Photography</h4>
+                <h4 className={styles.sideHeading}>Professional Media</h4>
               </div>
               <div className={styles.colBody}>
                 <h4 className={styles.sideHeading}>

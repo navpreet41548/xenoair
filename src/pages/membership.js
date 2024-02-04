@@ -16,7 +16,7 @@ const Membership = () => {
     {
       question: "What is member pricing?",
       answer:
-        "Members save 25% on scheduled flights and 17% for on-demand flights when compared to non-member pricing.",
+        "Members save upto 25% on scheduled flights and 17% for on-demand flights when compared to competitors pricing.",
     },
     {
       question: "How often can I fly?",
@@ -68,7 +68,7 @@ const Membership = () => {
             <div className={styles.cardUpper}>
               <h3 className={styles.planName}>GOLD</h3>
               <h3 className={styles.pricing}>
-                1479 <span className={styles.priceDiff}>/PER MONTH</span>
+                2997 <span className={styles.priceDiff}>/PER ANNUM</span>
               </h3>
               <p className={styles.cardPoint}>
                 Unlimited flights at member pricing
@@ -127,7 +127,7 @@ const Membership = () => {
             <div className={styles.cardUpper}>
               <h3 className={styles.planName}>PLATINUM</h3>
               <h3 className={styles.pricing}>
-                2497 <span className={styles.priceDiff}>/PER MONTH</span>
+                4997 <span className={styles.priceDiff}>/PER ANNUM</span>
               </h3>
               <p className={styles.cardPoint}>
                 Unlimited flights at member pricing
@@ -203,7 +203,7 @@ const Membership = () => {
             <div className={styles.cardUpper}>
               <h3 className={styles.planName}>DIAMOND</h3>
               <h3 className={styles.pricing}>
-                4997 <span className={styles.priceDiff}>/PER MONTH</span>
+                9997 <span className={styles.priceDiff}>/PER ANNUM</span>
               </h3>
               <p className={styles.cardPoint}>
                 Unlimited flights at member pricing
@@ -216,19 +216,25 @@ const Membership = () => {
                   <li className={styles.checklistItem}>
                     <i class="bx bxs-check-circle"></i>
                     <p className={styles.checklistText}>Chauffeur Services</p>
-                    <p className={styles.checkListTextDiff}>Unlimited Time</p>
+                    <p className={styles.checkListTextDiff}>
+                      Unlimited Use ~ availability
+                    </p>
                   </li>
                   <li className={styles.checklistItem}>
                     <i class="bx bxs-check-circle"></i>
                     <p className={styles.checklistText}>Staging Services</p>
-                    <p className={styles.checkListTextDiff}>Unlimited Time</p>
+                    <p className={styles.checkListTextDiff}>
+                      Unlimited Use ~ availability
+                    </p>
                   </li>
                   <li className={styles.checklistItem}>
                     <i class="bx bxs-check-circle"></i>
                     <p className={styles.checklistText}>
                       Professional Photography
                     </p>
-                    <p className={styles.checkListTextDiff}>Unlimited Time</p>
+                    <p className={styles.checkListTextDiff}>
+                      Unlimited Use ~ availability
+                    </p>
                   </li>
                   <li className={styles.checklistItem}>
                     <i class="bx bxs-check-circle"></i>
@@ -243,7 +249,9 @@ const Membership = () => {
                   <li className={styles.checklistItem}>
                     <i class="bx bxs-check-circle"></i>
                     <p className={styles.checklistText}>Catering Services</p>
-                    <p className={styles.checkListTextDiff}>3 Time/Year</p>
+                    <p className={styles.checkListTextDiff}>
+                      Unlimited Use ~availability~
+                    </p>
                   </li>
                   <li className={styles.checklistItem}>
                     <i class="bx bxs-check-circle"></i>
@@ -471,8 +479,8 @@ const Membership = () => {
                 </h4>
               </div>
               <div className={styles.colBody}>
-                <h4 className={`${styles.boxText} ${styles.boxTextLight}`}>
-                  Add-On
+                <h4 className={`${styles.boxText} ${styles.boxTextGold}`}>
+                  <i class="bx bxs-check-circle"></i>
                 </h4>
               </div>
             </div>

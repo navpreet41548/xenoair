@@ -83,7 +83,7 @@ const Navbar = () => {
           <Link
             onClick={removeClass}
             className={styles.navLink}
-            href={"/enterprice"}
+            href={"/enterprise"}
           >
             ENTERPRISE
           </Link>

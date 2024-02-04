@@ -8,7 +8,6 @@ export default async function handler(req, res) {
     phone,
     dateOfBirth,
     address,
-    weight,
     sex,
     membershipTier,
     departingAreasOfInterest,
@@ -39,7 +38,6 @@ export default async function handler(req, res) {
         Date Of Birth:${dateOfBirth}
         Address :${address}
         Sex :${sex}
-        Weight :${weight}
         Date of Birth :${dateOfBirth}
         Membership Tier :${membershipTier}
         Departing Areas of Interest:${departingAreasOfInterest}

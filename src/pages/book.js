@@ -6,6 +6,7 @@ import Head from "next/head";
 const Book = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isRoundAbout, setIsRoundAbout] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -14,6 +15,7 @@ const Book = () => {
     phone: "",
     departureCity: "",
     arrivalCity: "",
+    returnDate: "",
     departureDate: "",
     numberOfPassengers: "",
     customMessage: "",
@@ -24,9 +26,14 @@ const Book = () => {
   };
 
   const handleCheckbox = async () => {
-    const checkbox = document.getElementsByClassName(styles.checkbox)[0];
+    const checkbox = document.getElementsByClassName(styles.checkbox1)[0];
     checkbox.classList.toggle(styles.checkboxActive);
     setShowMessage(!showMessage);
+  };
+  const handleCheckbox2 = async () => {
+    const checkbox = document.getElementsByClassName(styles.checkbox2)[0];
+    checkbox.classList.toggle(styles.checkboxActive);
+    setIsRoundAbout(!isRoundAbout);
   };
   let re =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -58,14 +65,15 @@ const Book = () => {
       setLoading(false);
       return;
     }
-    if (!re.test(formData.email)) {
-      toast.warn("Invalid Email", {
+    if (isRoundAbout && formData.returnDate == "") {
+      toast.warn("Every Field is Important", {
         position: "top-right",
         autoClose: 5000,
       });
       setLoading(false);
       return;
     }
+
     const id = toast.loading("Please wait...", {
       position: "top-right",
       closeOnClick: true,
@@ -131,7 +139,6 @@ const Book = () => {
       <div className={styles.container}>
         <div className={styles.form}>
           <h2 className={styles.formHeading}>Fill Out the Form</h2>
-          <p className={styles.formPara}>You can attach a custom message</p>
 
           <div className={styles.inputWrapper}>
             <input
@@ -180,6 +187,27 @@ const Book = () => {
             type="date"
             name="departureDate"
           />
+          {isRoundAbout && (
+            <>
+              <h3 className={styles.label}>Return Date</h3>
+              <input
+                onChange={(e) => handleInput(e)}
+                className={styles.input}
+                placeholder="Return Date"
+                type="date"
+                name="returnDate"
+              />
+            </>
+          )}
+          <div className={styles.checkboxWrapper}>
+            <div
+              className={`${styles.checkbox} ${styles.checkbox2}`}
+              onClick={handleCheckbox2}
+            >
+              <i class="bx bx-check"></i>
+            </div>
+            <h4 className={styles.checkboxText}>Round About Trip</h4>
+          </div>
 
           <input
             onChange={(e) => handleInput(e)}
@@ -197,7 +225,10 @@ const Book = () => {
             ></textarea>
           )}
           <div className={styles.checkboxWrapper}>
-            <div className={styles.checkbox} onClick={handleCheckbox}>
+            <div
+              className={`${styles.checkbox1} ${styles.checkbox}`}
+              onClick={handleCheckbox}
+            >
               <i class="bx bx-check"></i>
             </div>
             <h4 className={styles.checkboxText}>Attach a custom message</h4>

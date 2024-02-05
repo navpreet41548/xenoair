@@ -55,9 +55,12 @@ const Footer = () => {
             >
               <i class="bx bxl-instagram"></i>
             </a>
-            <Link href={"/"} className={styles.socialIcon}>
-              <i class="bx bxl-facebook"></i>
-            </Link>
+            <a
+              href={"https://www.linkedin.com/company/xenoair"}
+              className={styles.socialIcon}
+            >
+              <i class="bx bxl-linkedin-square"></i>
+            </a>
             <a href={"mailto:info@xenoair.com"} className={styles.socialIcon}>
               <i class="bx bx-envelope"></i>
             </a>

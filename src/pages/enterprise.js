@@ -89,7 +89,7 @@ const Enterprice = () => {
           journey is unparalleled.
         </p>
         <p className={styles.smallPara}>
-          We'll customize an SLA and proposal to meet your enterprise's unique
+          We'll customize a SLA and proposal to meet your enterprise's unique
           travel needs, ensuring detailed compliance. Additionally, our
           reporting system provides comprehensive insights and detailed
           deliverables for a transparent overview of your travel management.
@@ -484,7 +484,7 @@ const Enterprice = () => {
             </div>
             <div className={styles.col4}>
               <div className={styles.colHeader}>
-                <h3 className={styles.planHeading}>DIAMOND</h3>
+                <h3 className={styles.planHeading}>LARGE</h3>
                 <a
                   href={
                     "https://api.leadconnectorhq.com/widget/booking/7wD4PmAWuoW724FdDGG7"

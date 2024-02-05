@@ -84,6 +84,7 @@ const HomeSection = () => {
             src={"/images/home/home1.png"}
             width={500}
             height={700}
+            loading="eager"
             alt="Airplane Image"
           />
           <Image
@@ -91,6 +92,7 @@ const HomeSection = () => {
             src={"/images/home/home2.png"}
             width={500}
             height={700}
+            loading="eager"
             alt="Airplane Image"
           />
           <Image
@@ -98,6 +100,7 @@ const HomeSection = () => {
             src={"/images/home/home4.png"}
             width={500}
             height={700}
+            loading="eager"
             alt="Airplane Image"
           />
           <Image
@@ -105,6 +108,7 @@ const HomeSection = () => {
             src={"/images/home/home5.png"}
             width={500}
             height={700}
+            loading="eager"
             alt="Airplane Image"
           />
           <Image
@@ -112,13 +116,15 @@ const HomeSection = () => {
             src={"/images/home/home3.png"}
             width={500}
             height={700}
+            loading="eager"
             alt="Airplane Image"
           />
           <Image
             className={styles.homeImage}
-            src={"/images/home/home1.png"}
+            src={"/images/home/home6.png"}
             width={500}
             height={700}
+            loading="eager"
             alt="Airplane Image"
           />
         </div>
@@ -156,9 +162,7 @@ const HomeSection = () => {
           transition={{
             delay: 0.6,
           }}
-          href={
-            "https://discord.com/channels/@me/1169701285965086791/1203359729884209172"
-          }
+          href={"https://www.linkedin.com/company/xenoair"}
           className={styles.socialIcon}
         >
           <i class="bx bxl-linkedin-square"></i>

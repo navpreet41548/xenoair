@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "@/styles/HomeSection.module.css";
 import Link from "next/link";
@@ -9,7 +9,30 @@ const HomeSection = () => {
     const rightContainer = document.getElementsByClassName(styles.right)[0];
     rightContainer.classList.toggle(styles.rightActive);
   };
+  // Arrays of image pairs you want to rotate together
+  const imagePairs = [
+    ["/images/home/home1.png", "/images/home/home2.png"], // First pair
+    ["/images/home/home3.png", "/images/home/home4.png"], // Second pair, replace with your actual image paths
+    ["/images/home/home5.png", "/images/home/home6.png"], // Second pair, replace with your actual image paths
+    ["/images/home/home7.png", "/images/home/home8.png"], // Second pair, replace with your actual image paths
+    ["/images/home/home9.png", "/images/home/home5.png"], // Second pair, replace with your actual image paths
+  ];
 
+  // State to manage which pair of images is visible
+  const [visiblePairIndex, setVisiblePairIndex] = useState(0);
+  const [opacity, setOpacity] = useState("visible"); // New state to manage opacity
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setOpacity("hidden"); // First, make the images invisible
+      setTimeout(() => {
+        setVisiblePairIndex((prevIndex) => (prevIndex + 1) % imagePairs.length); // Then change the image pair
+        setOpacity("visible"); // Finally, make the new images visible
+      }, 1000); // Wait for the opacity transition to complete before changing the images
+    }, 4000); // Increase interval to include opacity transition time
+
+    return () => clearInterval(intervalId);
+  }, [imagePairs.length]);
   return (
     <div className={styles.homeContainer}>
       <div className={styles.left}>
@@ -69,26 +92,31 @@ const HomeSection = () => {
         className={styles.right}
       >
         <div className={styles.arrowIcon}>
-          <Image
+          {/* <Image
             onClick={handleArrowClick}
             className={styles.arrowImage}
             src={"/images/arrowIcon.png"}
             width={100}
             height={200}
             alt="Arrow Icon"
-          />
+          /> */}
         </div>
         <div className={styles.homeImageWrapper}>
+          {imagePairs[visiblePairIndex].map((src, index) => (
+            <Image
+              key={src}
+              className={`${styles.homeImage} ${styles[opacity]}`}
+              src={src}
+              width={500}
+              height={700}
+              loading="eager"
+              alt={`Rotating Image Pair ${visiblePairIndex + 1}, Image ${
+                index + 1
+              }`}
+            />
+          ))}
           <Image
-            className={styles.homeImage}
-            src={"/images/home/home1.png"}
-            width={500}
-            height={700}
-            loading="eager"
-            alt="Airplane Image"
-          />
-          <Image
-            className={styles.homeImage}
+            className={`${styles.homeImage} ${styles.homeImageHidden}`}
             src={"/images/home/home2.png"}
             width={500}
             height={700}
@@ -96,7 +124,7 @@ const HomeSection = () => {
             alt="Airplane Image"
           />
           <Image
-            className={styles.homeImage}
+            className={`${styles.homeImage} ${styles.homeImageHidden}`}
             src={"/images/home/home4.png"}
             width={500}
             height={700}
@@ -104,7 +132,7 @@ const HomeSection = () => {
             alt="Airplane Image"
           />
           <Image
-            className={styles.homeImage}
+            className={`${styles.homeImage} ${styles.homeImageHidden}`}
             src={"/images/home/home5.png"}
             width={500}
             height={700}
@@ -112,7 +140,7 @@ const HomeSection = () => {
             alt="Airplane Image"
           />
           <Image
-            className={styles.homeImage}
+            className={`${styles.homeImage} ${styles.homeImageHidden}`}
             src={"/images/home/home3.png"}
             width={500}
             height={700}
@@ -120,7 +148,7 @@ const HomeSection = () => {
             alt="Airplane Image"
           />
           <Image
-            className={styles.homeImage}
+            className={`${styles.homeImage} ${styles.homeImageHidden}`}
             src={"/images/home/home6.png"}
             width={500}
             height={700}

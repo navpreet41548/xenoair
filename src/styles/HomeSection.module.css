@@ -82,6 +82,22 @@
   height: auto;
   margin-right: 30px;
   object-fit: cover;
+  transition: opacity 1s ease-in-out; /* Smooth transition for the opacity change */
+}
+
+.homeImageAnimation {
+  position: absolute;
+}
+
+.hidden {
+  opacity: 0;
+}
+.homeImageHidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }
 
 .tagLine {
@@ -274,7 +290,7 @@
     margin-left: 30px;
   }
   .right {
-    left: 55%;
+    left: 50%;
   }
 }
 
@@ -326,11 +342,19 @@
   .buttonContainer {
     justify-content: center;
   }
+  .homeImageWrapper {
+    left: 0;
+  }
+  .right {
+    bottom: -30px;
+    left: 14%;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .right {
     min-height: 320px;
+    bottom: 0;
   }
   .homeImageWrapper {
     left: 50px;
@@ -371,9 +395,11 @@
   }
   .homeImageWrapper {
     height: 100%;
+    left: 10px;
   }
   .homeImage {
-    height: 100%;
+    height: 70%;
+    margin-right: 10px;
     width: auto;
   }
   .button2 {

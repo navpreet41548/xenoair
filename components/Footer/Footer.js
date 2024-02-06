@@ -90,9 +90,9 @@ const Footer = () => {
           <h4 className={styles.copyright}>
             &copy; 2024 XENOAIR. All Rights Reserved.
           </h4>
-          <h4 className={styles.credit}>
+          {/* <h4 className={styles.credit}>
             Site By <span className={styles.diff}>Name</span>
-          </h4>
+          </h4> */}
         </div>
       </div>
     </div>

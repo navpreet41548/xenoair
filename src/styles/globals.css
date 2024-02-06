@@ -28,3 +28,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.diff {
+  color: #c8a367;
+}

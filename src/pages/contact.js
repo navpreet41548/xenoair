@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { toast } from "react-toastify";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Contact = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const [contactData, setContactData] = useState({
     firstName: "",
@@ -66,6 +68,7 @@ const Contact = () => {
           pauseOnHover: true,
           draggable: true,
         });
+        router.push("/");
         setLoading(false);
       } else {
         toast.update(id, {

@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { toast } from "react-toastify";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const MembershipInquiry = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
   const [inquiryData, setInquiryData] = useState({
     firstName: "",
     lastName: "",
@@ -118,6 +121,7 @@ const MembershipInquiry = () => {
           draggable: true,
         });
         setLoading(false);
+        router.push("/");
       } else {
         toast.update(id, {
           render: "Something Went Wrong",

@@ -22,7 +22,7 @@ const FaqSection = () => {
     {
       question: "What information do I need to provide for my booking?",
       answer:
-        "The following information is required for anyone flying: full name, residential address, date of birth, weight, gender, and the number of luggage times along with their total weight. You can also provide a Known Traveller Number if you have one.",
+        "The following information is required for anyone flying: Full Name, Email, Phone, Departure City, Arrival City, Departure Date, Number of Passengers.",
     },
     {
       question: "Is there a cancellation policy?",
@@ -57,7 +57,7 @@ const FaqSection = () => {
     {
       question: "Can I book flights online?",
       answer:
-        "Yes, you can just fill out this form here (link here to the booking form) and we will coordinate your request asap.",
+        "Yes, you can just fill out this <a className='diff' style='color:#c8a367;' href='/book'>form here</a> and we will coordinate your request asap.",
     },
     {
       question: "Am I able to book multi-stop trips?",
@@ -109,7 +109,10 @@ const FaqSection = () => {
               </div>
             </div>
             <div className={styles.answer}>
-              <p className={styles.answerPara}>{item.answer}</p>
+              <p
+                className={styles.answerPara}
+                dangerouslySetInnerHTML={{ __html: item.answer }}
+              ></p>{" "}
             </div>
           </>
         ))}

@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Book = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [loading, setLoading] = useState(false);
   const [isRoundAbout, setIsRoundAbout] = useState(false);
+  const router = useRouter();
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -107,6 +109,7 @@ const Book = () => {
         draggable: true,
       });
       setLoading(false);
+      router.push("/");
     } else {
       // toast.error("Something Went Wrong", {
       //   position: "top-center",

@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import styles from "@/styles/Book.module.css";
 import { toast } from "react-toastify";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const WeeklyDeals = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -76,6 +78,7 @@ const WeeklyDeals = () => {
           draggable: true,
         });
         setLoading(false);
+        router.push("/");
       } else {
         toast.update(id, {
           render: "Something Went Wrong",
